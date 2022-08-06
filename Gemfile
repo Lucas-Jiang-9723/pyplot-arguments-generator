@@ -54,3 +54,6 @@ end
 group :production do
   gem 'pg'
 end
+
+# #source: 1. https://github.com/mrkn/pycall.rb ;2. https://github.com/mrkn/matplotlib.rb
+gem 'pycall'

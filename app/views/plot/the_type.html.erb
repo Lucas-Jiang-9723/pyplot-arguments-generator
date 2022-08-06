@@ -51,12 +51,13 @@
             Optionals:
             <li class="">
               <div>
-                <label for="hue"> Name of the Vector Variable </label>
+                <label for="hue"> Name of the Vector Variable (e.g. "Smoker_dummy", "Male_dummy")</label>
               </div>
               <div>
-                <input id="hue" type="text" name="hue" placeholder="Separates your X by a vector variable" value="None">
+                <input id="hue" type="text" name="hue" placeholder="Separates your X by a vector variable" value="default">
               </div>
             </li>
+
             <li class="">
               <div>
                 <label for="order"> Order of bars (ascending/descending)</label>
@@ -64,25 +65,45 @@
               <div>
                 <select id="order" name="order">
               </div>
-                <option value="None"> None </option>
+                <option value="default"> default </option>
                 <option value="ascending"> Ascending </option>
                 <option value="descending"> Descending </option>
               </select>
             </li>
+
             <li class="">
               <div>
                 <label for="hue_order"> Order of the Vector Variable Categories (enter a list of hue names, e.g. ["a","b","c"])</label>
               </div>
               <div>
-                <input id="hue_order" type="text" name="hue_order" placeholder="Order to plot the categorical levels in" value="None">
+                <input id="hue_order" type="text" name="hue_order" placeholder="Order to plot the categorical levels in" value="default">
               </div>
             </li>
+
             <li class="">
               <div>
-                <label for="estimator">Statistical function to estimate within each categorical bin (e.g. mean, np.mean, etc.) </label>
+                <label for="estimator">Statistical function to estimate within each categorical bin (e.g. mean, np.mean) </label>
               </div>
               <div>
-                <input id="estimator" type="text" name="estimator" placeholder="Enter the function name" value="None">
+                <input id="estimator" type="text" name="estimator" placeholder="Enter the function name" value="default">
+              </div>
+            </li>
+
+            <li class="">
+              <div>
+                <label for="ci">Size of Confidence Interval (a float, or "sd", or None) </label>
+              </div>
+              <div>
+                <input id="ci" type="text" name="ci" placeholder="Enter the Confidence Interval" value="default">
+              </div>
+            </li>
+
+            <li class="">
+              <div>
+                <label for="n_boot">Number of bootstrap iterations to use (int) </label>
+              </div>
+              <div>
+                <input id="n_boot" type="text" name="n_boot" placeholder="Number of bootstrap iterations" value="default">
               </div>
             </li>
 
@@ -91,12 +112,13 @@
             #     <label for=""> </label>
             #   </div>
             #   <div>
-            #     <input id="" type="text" name="" placeholder="" value="None">
+            #     <input id="" type="text" name="" placeholder="" value="default">
             #   </div>
             # </li>
           </ul>  
 
         <%end%>
+
         <%if @the_type == "Pie Chart"%>
           Pie Chart
         <%end%>

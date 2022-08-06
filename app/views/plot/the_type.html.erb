@@ -1,11 +1,121 @@
 <html>
   <head>
     <div class="">
-      <h1> <%= @the_type%> </h1>
+      <%= @the_type%>
+    </div>
+    <div class="">
+      Please fill in the corresponding argument options and click the SUBMIT button when finished!
+    </div>
+    <div class="">
+      Note: For optionals, if you leave them be, they will use default arguments.
     </div>
   </head>
 
   </body>
+      <div class="">
+          My <%= @the_type%> will have...
+      </div>
+
+      <div class="">
+        <%if @the_type == "Bar Chart"%>
+          <form action="" class="">
+          <ul class="">
+            Must haves:
+            <li class="">
+              <div>
+                <label for="x"> Name of X Variable </label>
+              </div>
+              <div>
+                <input id="x" type="text" name="x" placeholder="Enter the name of X variable...">
+              </div>
+            </li>
+            <li class="">
+              <div>
+                <label for="y"> Name of Y Variable </label>
+              </div>
+              <div>
+                <input id="y" type="text" name="y" placeholder="Enter the name of Y variable...">
+              </div>
+            </li>
+            <li class="">
+              <div>
+                <label for="data"> Name of Dataset </label>
+              </div>
+              <div>
+                <input id="data" type="text" name="data" placeholder="Enter the name of dataset...">
+              </div>
+            </li>
+          </ul>  
+
+          <ul class="">
+            Optionals:
+            <li class="">
+              <div>
+                <label for="hue"> Name of the Vector Variable </label>
+              </div>
+              <div>
+                <input id="hue" type="text" name="hue" placeholder="Separates your X by a vector variable" value="None">
+              </div>
+            </li>
+            <li class="">
+              <div>
+                <label for="order"> Order of bars (ascending/descending)</label>
+              </div>
+              <div>
+                <select id="order" name="order">
+              </div>
+                <option value="None"> None </option>
+                <option value="ascending"> Ascending </option>
+                <option value="descending"> Descending </option>
+              </select>
+            </li>
+            <li class="">
+              <div>
+                <label for="hue_order"> Order of the Vector Variable Categories (enter a list of hue names, e.g. ["a","b","c"])</label>
+              </div>
+              <div>
+                <input id="hue_order" type="text" name="hue_order" placeholder="Order to plot the categorical levels in" value="None">
+              </div>
+            </li>
+            <li class="">
+              <div>
+                <label for="estimator">Statistical function to estimate within each categorical bin (e.g. mean, np.mean, etc.) </label>
+              </div>
+              <div>
+                <input id="estimator" type="text" name="estimator" placeholder="Enter the function name" value="None">
+              </div>
+            </li>
+
+            # <li class="">
+            #   <div>
+            #     <label for=""> </label>
+            #   </div>
+            #   <div>
+            #     <input id="" type="text" name="" placeholder="" value="None">
+            #   </div>
+            # </li>
+          </ul>  
+
+        <%end%>
+        <%if @the_type == "Pie Chart"%>
+          Pie Chart
+        <%end%>
+        <%if @the_type == "Box Plot"%>
+          Box Plot
+        <%end%>
+        <%if @the_type == "Histogram"%>
+          Histogram
+        <%end%>
+        <%if @the_type == "Line Chart"%>
+          Line Chart
+        <%end%>
+        <%if @the_type == "Scatter Plot"%>
+          Scatter Plot
+        <%end%>
+      </div>
+  
+  
+  
   </body>
 
 </html>

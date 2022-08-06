@@ -3,4 +3,8 @@ class HomeController < ApplicationController
     render(:template => "/homepage/home.html.erb")
   end
 
+  def hesitate
+    render(:template => "homepage/hesitate.html.erb")
+  end
+
 end

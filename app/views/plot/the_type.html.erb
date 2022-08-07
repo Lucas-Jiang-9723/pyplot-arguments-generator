@@ -12,6 +12,11 @@
   </head>
 
   </body>
+      <div>
+        <a href="https://seaborn.pydata.org/generated/seaborn.barplot.html#seaborn.barplot">
+            More Info on Barplot Arguments...
+        </a>
+      </div>
       <div class="">
           My <%= @the_type%> will have...
       </div>
@@ -51,6 +56,9 @@
             Optionals:
             <li class="">
               <div>
+                hue
+              </div>
+              <div>
                 <label for="hue"> Name of the Vector Variable (e.g. "Smoker_dummy", "Male_dummy")</label>
               </div>
               <div>
@@ -60,18 +68,24 @@
 
             <li class="">
               <div>
+                order
+              </div>
+              <div>
                 <label for="order"> Order of bars (ascending/descending)</label>
               </div>
               <div>
-                <select id="order" name="order">
+                  <select id="order" name="order">
+                  <option value="default"> default </option>
+                  <option value="ascending"> Ascending </option>
+                  <option value="descending"> Descending </option>
+                </select>
               </div>
-                <option value="default"> default </option>
-                <option value="ascending"> Ascending </option>
-                <option value="descending"> Descending </option>
-              </select>
             </li>
 
             <li class="">
+              <div>
+                hue_order
+              </div>
               <div>
                 <label for="hue_order"> Order of the Vector Variable Categories (enter a list of hue names, e.g. ["a","b","c"])</label>
               </div>
@@ -82,6 +96,9 @@
 
             <li class="">
               <div>
+                estimator
+              </div>
+              <div>
                 <label for="estimator">Statistical function to estimate within each categorical bin (e.g. mean, np.mean) </label>
               </div>
               <div>
@@ -90,6 +107,9 @@
             </li>
 
             <li class="">
+              <div>
+                ci
+              </div>
               <div>
                 <label for="ci">Size of Confidence Interval (a float, or "sd", or None) </label>
               </div>
@@ -100,6 +120,9 @@
 
             <li class="">
               <div>
+                n_boot
+              </div>
+              <div>
                 <label for="n_boot">Number of bootstrap iterations to use (int) </label>
               </div>
               <div>
@@ -107,20 +130,159 @@
               </div>
             </li>
 
-            # <li class="">
-            #   <div>
-            #     <label for=""> </label>
-            #   </div>
-            #   <div>
-            #     <input id="" type="text" name="" placeholder="" value="default">
-            #   </div>
-            # </li>
-          </ul>  
+            <li class="">
+              <div>
+                units             
+              </div>
+              <div>
+                <label for="units">Identifier of sampling units </label>
+              </div>
+              <div>
+                <input id="units" type="text" name="units" placeholder="Name of variale in data or vector data" value="default">
+              </div>
+            </li>
 
+            <li class="">
+              <div>
+                seed
+              </div>
+              <div>
+                <label for="seed">Seed (int, numpy.random.Generator, or numpy.random.RandomState, etc.) </label>
+              </div>
+              <div>
+                <input id="seed" type="text" name="seed" placeholder="Seed or random number generator for reproducible bootstrapping" value="default">
+              </div>
+            </li>
+
+            <li class="">
+              <div>
+                orient
+              </div>
+              <div>
+                 <label for="orient"> Vertical or horizontal</label>
+               </div>
+               <div>
+                  <select id="orient" name="orient">
+                  <option value="default"> default </option>
+                  <option value="v"> vertical </option>
+                  <option value="h"> horizontal </option>
+                </select>
+              </div>
+            </li>
+
+            <li class="">
+              <div>
+                color
+              </div>
+              <div>
+                 <label for="color">Color for all elements</label>
+               </div>
+               <div>
+                 <input id="color" type="text" name="color" placeholder="Enter color" value="default">
+              </div>
+            </li>
+
+            <li class="">
+              <div>
+                palette
+              </div>
+              <div>
+                 <label for="palette">Colors to use for different levels of hue variable, details check color_palette()</label>
+               </div>
+               <div>
+                 <input id="palette" type="text" name="palette" placeholder="Enter color palette" value="default">
+              </div>
+            </li>
+
+            <li class="">
+              <div>
+                saturation  
+              </div>
+              <div>
+                 <label for="saturation">Proportion of the original saturation to draw colors at</label>
+               </div>
+               <div>
+                 <input id="saturation" type="text" name="saturation" placeholder="Enter float" value="default">
+              </div>
+            </li>
+            
+            <li class="">
+              <div>
+                errcolor  
+              </div>
+              <div>
+                 <label for="errcolor">Color for the lines that represent the confidence interval</label>
+               </div>
+               <div>
+                 <input id="errcolor" type="text" name="errcolor" placeholder="Enter errcolor" value="default">
+              </div>
+            </li>
+            
+            <li class="">
+              <div>
+                errwidth
+              </div>
+              <div>
+                <label for="errwidth">Thickness of error bar lines (and caps)</label>
+              </div>
+              <div>
+                <input id="errwidth" type="text" name="errwidth" placeholder="Enter float" value="default">
+              </div>
+            </li>
+            
+            <li class="">
+              <div>
+                capsize
+              </div>
+              <div>
+                 <label for="capsize">Width of the caps on error bars</label>
+               </div>
+               <div>
+                 <input id="capsize" type="text" name="capsize" placeholder="Enter float" value="default">
+              </div>
+            </li>
+            
+            <li class="">
+              <div>
+                dodge
+              </div>
+              <div>
+                 <label for="dodge">Whether elements should be shifted along the categorical axis</label>
+               </div>
+               <div>
+                 <input id="dodge" type="text" name="dodge" placeholder="Enter boolean" value="default">
+              </div>
+            </li>
+            
+            <li class="">
+              <div>
+                ax
+              </div>
+              <div>
+                 <label for="ax">Axes object to draw the plot onto</label>
+               </div>
+               <div>
+                 <input id="ax" type="text" name="ax" placeholder="matplotlib axes" value="default">
+              </div>
+            </li>
+          </ul>
         <%end%>
 
         <%if @the_type == "Pie Chart"%>
           Pie Chart
+          <ul>
+            # <li class="">
+            #   <div>
+              
+            #   </div>
+            #   <div>
+            #      <label for=""> </label>
+            #    </div>
+            #    <div>
+            #      <input id="" type="text" name="" placeholder="" value="default">
+            #   </div>
+            # </li>
+          </ul>
         <%end%>
         <%if @the_type == "Box Plot"%>
           Box Plot
@@ -134,6 +296,9 @@
         <%if @the_type == "Scatter Plot"%>
           Scatter Plot
         <%end%>
+        <button>
+          SUBMIT!
+        </button>
       </div>
   
   

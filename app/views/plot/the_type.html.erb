@@ -24,248 +24,249 @@
       <div class="">
         <%if @the_type == "Bar Chart"%>
           <form action="" class="">
-          <ul class="">
-            Must haves:
-            <li class="">
-              <div>
-                <label for="x"> Name of X Variable </label>
-              </div>
-              <div>
-                <input id="x" type="text" name="x" placeholder="Enter the name of X variable...">
-              </div>
-            </li>
-            <li class="">
-              <div>
-                <label for="y"> Name of Y Variable </label>
-              </div>
-              <div>
-                <input id="y" type="text" name="y" placeholder="Enter the name of Y variable...">
-              </div>
-            </li>
-            <li class="">
-              <div>
-                <label for="data"> Name of Dataset </label>
-              </div>
-              <div>
-                <input id="data" type="text" name="data" placeholder="Enter the name of dataset...">
-              </div>
-            </li>
-          </ul>  
+            <ul class="">
+              Must haves:
+              <li class="">
+                <div>
+                  <label for="x"> Name of X Variable </label>
+                </div>
+                <div>
+                  <input id="x" type="text" name="x" placeholder="Enter the name of X variable...">
+                </div>
+              </li>
+              <li class="">
+                <div>
+                  <label for="y"> Name of Y Variable </label>
+                </div>
+                <div>
+                  <input id="y" type="text" name="y" placeholder="Enter the name of Y variable...">
+                </div>
+              </li>
+              <li class="">
+                <div>
+                  <label for="data"> Name of Dataset </label>
+                </div>
+                <div>
+                  <input id="data" type="text" name="data" placeholder="Enter the name of dataset...">
+                </div>
+              </li>
+            </ul>  
 
-          <ul class="">
-            Optionals:
-            <li class="">
-              <div>
-                hue
-              </div>
-              <div>
-                <label for="hue"> Name of the Vector Variable (e.g. "Smoker_dummy", "Male_dummy")</label>
-              </div>
-              <div>
-                <input id="hue" type="text" name="hue" placeholder="Separates your X by a vector variable" value="default">
-              </div>
-            </li>
+            <ul class="">
+              Optionals:
+              <li class="">
+                <div>
+                  hue
+                </div>
+                <div>
+                  <label for="hue"> Name of the Vector Variable (e.g. "Smoker_dummy", "Male_dummy")</label>
+                </div>
+                <div>
+                  <input id="hue" type="text" name="hue" placeholder="Separates your X by a vector variable" value="default">
+                </div>
+              </li>
 
-            <li class="">
-              <div>
-                order
-              </div>
-              <div>
-                <label for="order"> Order of bars (ascending/descending)</label>
-              </div>
-              <div>
-                  <select id="order" name="order">
-                  <option value="default"> default </option>
-                  <option value="ascending"> Ascending </option>
-                  <option value="descending"> Descending </option>
-                </select>
-              </div>
-            </li>
+              <li class="">
+                <div>
+                  order
+                </div>
+                <div>
+                  <label for="order"> Order of bars (ascending/descending)</label>
+                </div>
+                <div>
+                    <select id="order" name="order">
+                    <option value="default"> default </option>
+                    <option value="ascending"> Ascending </option>
+                    <option value="descending"> Descending </option>
+                  </select>
+                </div>
+              </li>
 
-            <li class="">
-              <div>
-                hue_order
-              </div>
-              <div>
-                <label for="hue_order"> Order of the Vector Variable Categories (enter a list of hue names, e.g. ["a","b","c"])</label>
-              </div>
-              <div>
-                <input id="hue_order" type="text" name="hue_order" placeholder="Order to plot the categorical levels in" value="default">
-              </div>
-            </li>
+              <li class="">
+                <div>
+                  hue_order
+                </div>
+                <div>
+                  <label for="hue_order"> Order of the Vector Variable Categories (enter a list of hue names, e.g. ["a","b","c"])</label>
+                </div>
+                <div>
+                  <input id="hue_order" type="text" name="hue_order" placeholder="Order to plot the categorical levels in" value="default">
+                </div>
+              </li>
 
-            <li class="">
-              <div>
-                estimator
-              </div>
-              <div>
-                <label for="estimator">Statistical function to estimate within each categorical bin (e.g. mean, np.mean) </label>
-              </div>
-              <div>
-                <input id="estimator" type="text" name="estimator" placeholder="Enter the function name" value="default">
-              </div>
-            </li>
+              <li class="">
+                <div>
+                  estimator
+                </div>
+                <div>
+                  <label for="estimator">Statistical function to estimate within each categorical bin (e.g. mean, np.mean) </label>
+                </div>
+                <div>
+                  <input id="estimator" type="text" name="estimator" placeholder="Enter the function name" value="default">
+                </div>
+              </li>
 
-            <li class="">
-              <div>
-                ci
-              </div>
-              <div>
-                <label for="ci">Size of Confidence Interval (a float, or "sd", or None) </label>
-              </div>
-              <div>
-                <input id="ci" type="text" name="ci" placeholder="Enter the Confidence Interval" value="default">
-              </div>
-            </li>
+              <li class="">
+                <div>
+                  ci
+                </div>
+                <div>
+                  <label for="ci">Size of Confidence Interval (a float, or "sd", or None) </label>
+                </div>
+                <div>
+                  <input id="ci" type="text" name="ci" placeholder="Enter the Confidence Interval" value="default">
+                </div>
+              </li>
 
-            <li class="">
-              <div>
-                n_boot
-              </div>
-              <div>
-                <label for="n_boot">Number of bootstrap iterations to use (int) </label>
-              </div>
-              <div>
-                <input id="n_boot" type="text" name="n_boot" placeholder="Number of bootstrap iterations" value="default">
-              </div>
-            </li>
+              <li class="">
+                <div>
+                  n_boot
+                </div>
+                <div>
+                  <label for="n_boot">Number of bootstrap iterations to use (int) </label>
+                </div>
+                <div>
+                  <input id="n_boot" type="text" name="n_boot" placeholder="Number of bootstrap iterations" value="default">
+                </div>
+              </li>
 
-            <li class="">
-              <div>
-                units             
-              </div>
-              <div>
-                <label for="units">Identifier of sampling units </label>
-              </div>
-              <div>
-                <input id="units" type="text" name="units" placeholder="Name of variale in data or vector data" value="default">
-              </div>
-            </li>
+              <li class="">
+                <div>
+                  units             
+                </div>
+                <div>
+                  <label for="units">Identifier of sampling units </label>
+                </div>
+                <div>
+                  <input id="units" type="text" name="units" placeholder="Name of variale in data or vector data" value="default">
+                </div>
+              </li>
 
-            <li class="">
-              <div>
-                seed
-              </div>
-              <div>
-                <label for="seed">Seed (int, numpy.random.Generator, or numpy.random.RandomState, etc.) </label>
-              </div>
-              <div>
-                <input id="seed" type="text" name="seed" placeholder="Seed or random number generator for reproducible bootstrapping" value="default">
-              </div>
-            </li>
+              <li class="">
+                <div>
+                  seed
+                </div>
+                <div>
+                  <label for="seed">Seed (int, numpy.random.Generator, or numpy.random.RandomState, etc.) </label>
+                </div>
+                <div>
+                  <input id="seed" type="text" name="seed" placeholder="Seed or random number generator for reproducible bootstrapping" value="default">
+                </div>
+              </li>
 
-            <li class="">
-              <div>
-                orient
-              </div>
-              <div>
-                 <label for="orient"> Vertical or horizontal</label>
-               </div>
-               <div>
-                  <select id="orient" name="orient">
-                  <option value="default"> default </option>
-                  <option value="v"> vertical </option>
-                  <option value="h"> horizontal </option>
-                </select>
-              </div>
-            </li>
+              <li class="">
+                <div>
+                  orient
+                </div>
+                <div>
+                  <label for="orient"> Vertical or horizontal</label>
+                </div>
+                <div>
+                    <select id="orient" name="orient">
+                    <option value="default"> default </option>
+                    <option value="v"> vertical </option>
+                    <option value="h"> horizontal </option>
+                  </select>
+                </div>
+              </li>
 
-            <li class="">
-              <div>
-                color
-              </div>
-              <div>
-                 <label for="color">Color for all elements</label>
-               </div>
-               <div>
-                 <input id="color" type="text" name="color" placeholder="Enter color" value="default">
-              </div>
-            </li>
+              <li class="">
+                <div>
+                  color
+                </div>
+                <div>
+                  <label for="color">Color for all elements</label>
+                </div>
+                <div>
+                  <input id="color" type="text" name="color" placeholder="Enter color" value="default">
+                </div>
+              </li>
 
-            <li class="">
-              <div>
-                palette
-              </div>
-              <div>
-                 <label for="palette">Colors to use for different levels of hue variable, details check color_palette()</label>
-               </div>
-               <div>
-                 <input id="palette" type="text" name="palette" placeholder="Enter color palette" value="default">
-              </div>
-            </li>
+              <li class="">
+                <div>
+                  palette
+                </div>
+                <div>
+                  <label for="palette">Colors to use for different levels of hue variable, details check color_palette()</label>
+                </div>
+                <div>
+                  <input id="palette" type="text" name="palette" placeholder="Enter color palette" value="default">
+                </div>
+              </li>
 
-            <li class="">
-              <div>
-                saturation  
-              </div>
-              <div>
-                 <label for="saturation">Proportion of the original saturation to draw colors at</label>
-               </div>
-               <div>
-                 <input id="saturation" type="text" name="saturation" placeholder="Enter float" value="default">
-              </div>
-            </li>
-            
-            <li class="">
-              <div>
-                errcolor  
-              </div>
-              <div>
-                 <label for="errcolor">Color for the lines that represent the confidence interval</label>
-               </div>
-               <div>
-                 <input id="errcolor" type="text" name="errcolor" placeholder="Enter errcolor" value="default">
-              </div>
-            </li>
-            
-            <li class="">
-              <div>
-                errwidth
-              </div>
-              <div>
-                <label for="errwidth">Thickness of error bar lines (and caps)</label>
-              </div>
-              <div>
-                <input id="errwidth" type="text" name="errwidth" placeholder="Enter float" value="default">
-              </div>
-            </li>
-            
-            <li class="">
-              <div>
-                capsize
-              </div>
-              <div>
-                 <label for="capsize">Width of the caps on error bars</label>
-               </div>
-               <div>
-                 <input id="capsize" type="text" name="capsize" placeholder="Enter float" value="default">
-              </div>
-            </li>
-            
-            <li class="">
-              <div>
-                dodge
-              </div>
-              <div>
-                 <label for="dodge">Whether elements should be shifted along the categorical axis</label>
-               </div>
-               <div>
-                 <input id="dodge" type="text" name="dodge" placeholder="Enter boolean" value="default">
-              </div>
-            </li>
-            
-            <li class="">
-              <div>
-                ax
-              </div>
-              <div>
-                 <label for="ax">Axes object to draw the plot onto</label>
-               </div>
-               <div>
-                 <input id="ax" type="text" name="ax" placeholder="matplotlib axes" value="default">
-              </div>
-            </li>
-          </ul>
+              <li class="">
+                <div>
+                  saturation  
+                </div>
+                <div>
+                  <label for="saturation">Proportion of the original saturation to draw colors at</label>
+                </div>
+                <div>
+                  <input id="saturation" type="text" name="saturation" placeholder="Enter float" value="default">
+                </div>
+              </li>
+              
+              <li class="">
+                <div>
+                  errcolor  
+                </div>
+                <div>
+                  <label for="errcolor">Color for the lines that represent the confidence interval</label>
+                </div>
+                <div>
+                  <input id="errcolor" type="text" name="errcolor" placeholder="Enter errcolor" value="default">
+                </div>
+              </li>
+              
+              <li class="">
+                <div>
+                  errwidth
+                </div>
+                <div>
+                  <label for="errwidth">Thickness of error bar lines (and caps)</label>
+                </div>
+                <div>
+                  <input id="errwidth" type="text" name="errwidth" placeholder="Enter float" value="default">
+                </div>
+              </li>
+              
+              <li class="">
+                <div>
+                  capsize
+                </div>
+                <div>
+                  <label for="capsize">Width of the caps on error bars</label>
+                </div>
+                <div>
+                  <input id="capsize" type="text" name="capsize" placeholder="Enter float" value="default">
+                </div>
+              </li>
+              
+              <li class="">
+                <div>
+                  dodge
+                </div>
+                <div>
+                  <label for="dodge">Whether elements should be shifted along the categorical axis</label>
+                </div>
+                <div>
+                  <input id="dodge" type="text" name="dodge" placeholder="Enter boolean" value="default">
+                </div>
+              </li>
+              
+              <li class="">
+                <div>
+                  ax
+                </div>
+                <div>
+                  <label for="ax">Axes object to draw the plot onto</label>
+                </div>
+                <div>
+                  <input id="ax" type="text" name="ax" placeholder="matplotlib axes" value="default">
+                </div>
+              </li>
+            </ul>
+          </form>
         <%end%>
 
         <%if @the_type == "Pie Chart"%>

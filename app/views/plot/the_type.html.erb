@@ -20,7 +20,7 @@
         <%if @the_type == "Bar Chart"%>
           <div>
           <a href="https://seaborn.pydata.org/generated/seaborn.barplot.html#seaborn.barplot">
-              More Info on Barplot Arguments...
+              More Info on bar plot Arguments...
           </a>
           </div>
           <form action="" class="">
@@ -325,7 +325,7 @@
         <%if @the_type == "Box Plot"%>
           <div>
             <a href="https://seaborn.pydata.org/generated/seaborn.boxplot.html">
-                More Info on Boxplot Arguments...
+                More Info on box plot Arguments...
             </a>
           </div>
           <form action="" class="">
@@ -565,7 +565,7 @@
         <%if @the_type == "Histogram"%>
           <div>
             <a href="https://seaborn.pydata.org/generated/seaborn.histplot.html">
-                More Info on Histogram Arguments...
+                More Info on histogram Arguments...
             </a>
           </div>
 
@@ -1034,16 +1034,670 @@
         <%end%>
 
         <%if @the_type == "Line Chart"%>
-          Line Chart
+          <div>
+          <a href="https://seaborn.pydata.org/generated/seaborn.lineplot.html">
+              More Info on line plot Arguments...
+          </a>
+          </div>
+          <form action="" class="">
+            <ul class="">
+              Must haves:
+              <li class="">
+                <div>
+                  <label for="x"> Name of X Variable </label>
+                </div>
+                <div>
+                  <input id="x" type="text" name="x" placeholder="Enter the name of X variable...">
+                </div>
+              </li>
+              <li class="">
+                <div>
+                  <label for="y"> Name of Y Variable </label>
+                </div>
+                <div>
+                  <input id="y" type="text" name="y" placeholder="Enter the name of Y variable...">
+                </div>
+              </li>
+              <li class="">
+                <div>
+                  <label for="data"> Name of Dataset </label>
+                </div>
+                <div>
+                  <input id="data" type="text" name="data" placeholder="Enter the name of dataset...">
+                </div>
+              </li>
+            </ul>  
+
+            <ul>
+              Recommended Optionals:
+              <li class="">
+                <div>
+                  <label for="set_title"> A title </label>
+                </div>
+                <div>
+                  <input id="set_title" type="text" name="set_title" placeholder="The title name you want..." value="default">
+                </div>
+              </li>
+              <li class="">
+                <div>
+                  <label for="set_xlabel"> X axis label </label>
+                </div>
+                <div>
+                  <input id="set_xlabel" type="text" name="set_xlabel" placeholder="The axis name you want..." value="default">
+                </div>
+              </li>
+              <li class="">
+                <div>
+                  <label for="set_ylabel"> Y axis label </label>
+                </div>
+                <div>
+                  <input id="set_ylabel" type="text" name="set_ylabel" placeholder="The axis name you want..." value="default">
+                </div>
+              </li>
+            </ul>
+
+
+            <ul class="">
+              Advanced Optionals:
+              <li class="">
+                <div>
+                  hue
+                </div>
+                <div>
+                  <label for="hue"> Name of the Vector Variable (e.g. "Smoker_dummy", "Male_dummy")</label>
+                </div>
+                <div>
+                  <input id="hue" type="text" name="hue" placeholder="Separates your X by a vector variable" value="default">
+                </div>
+              </li>
+              
+              <li class="">
+                <div>
+                  size
+                </div>
+                <div>
+                  <label for="size"> Grouping variable that produces lines with different widths</label>
+                </div>
+                <div>
+                  <input id="size" type="text" name="size" placeholder="vector or key in data" value="default">
+                </div>
+              </li>
+
+              <li class="">
+                <div>
+                  style
+                </div>
+                <div>
+                  <label for="style">Grouping variable that produces lines with different dashes and/or markers</label>
+                </div>
+                <div>
+                  <input id="style" type="text" name="style" placeholder="vector or key in data" value="default">
+                </div>
+              </li>
+
+              <li class="">
+                <div>
+                  palette
+                </div>
+                <div>
+                  <label for="palette">Colors to use for different levels of hue variable, details check color_palette()</label>
+                </div>
+                <div>
+                  <input id="palette" type="text" name="palette" placeholder="Enter color palette" value="default">
+                </div>
+              </li>
+
+              <li class="">
+                <div>
+                  hue_order
+                </div>
+                <div>
+                  <label for="hue_order"> Order of the Vector Variable Categories (enter a list of hue names, e.g. ["a","b","c"])</label>
+                </div>
+                <div>
+                  <input id="hue_order" type="text" name="hue_order" placeholder="Order to plot the categorical levels in" value="default">
+                </div>
+              </li>
+
+              <li class="">
+                <div>
+                  hue_norm
+                </div>
+                <div>
+                  <label for="hue_norm">Set the normalization range</label>
+                </div>
+                <div>
+                  <input id="hue_norm" type="text" name="hue_norm" placeholder="tuple or matplotlib.colors.Normalize" value="default">
+                </div>
+              </li>
+              
+              <li class="">
+                <div>
+                  sizes
+                </div>
+                <div>
+                  <label for="sizes">Object that determines how sizes are chosen</label>
+                </div>
+                <div>
+                  <input id="sizes" type="text" name="sizes" placeholder="list, dict, or tuple" value="default">
+                </div>
+              </li>
+              
+              <li class="">
+                <div>
+                  size_order
+                </div>
+                <div>
+                  <label for="size_order">Specified order for appearance of the size variable levels</label>
+                </div>
+                <div>
+                  <input id="size_order" type="text" name="size_order" placeholder="list" value="default">
+                </div>
+              </li>
+              
+              <li class="">
+                <div>
+                  size_norm
+                </div>
+                <div>
+                  <label for="size_norm">Normalization in data units for scaling plot objects when the size variable is numeric</label>
+                </div>
+                <div>
+                  <input id="size_norm" type="text" name="size_norm" placeholder="tuple or Normalize object" value="default">
+                </div>
+              </li>
+              
+              <li class="">
+                <div>
+                  dashes
+                </div>
+                <div>
+                  <label for="dashes">Object determining how to draw the lines for different levels of the style variable</label>
+                </div>
+                <div>
+                  <input id="dashes" type="text" name="dashes" placeholder="boolean, list, or dict" value="default">
+                </div>
+              </li>
+              
+              <li class="">
+                <div>
+                  markers
+                </div>
+                <div>
+                  <label for="markers">Object determining how to draw the markers for different levels of the style variable</label>
+                </div>
+                <div>
+                  <input id="markers" type="text" name="markers" placeholder="boolean, list, or dict" value="default">
+                </div>
+              </li>
+              
+              <li class="">
+                <div>
+                  style_order
+                </div>
+                <div>
+                  <label for="style_order">Specified order for appearance of the style variable levels</label>
+                </div>
+                <div>
+                  <input id="style_order" type="text" name="style_order" placeholder="list" value="default">
+                </div>
+              </li>
+
+              <li class="">
+                <div>
+                  units             
+                </div>
+                <div>
+                  <label for="units">Identifier of sampling units </label>
+                </div>
+                <div>
+                  <input id="units" type="text" name="units" placeholder="vector or key in data" value="default">
+                </div>
+              </li>
+
+              <li class="">
+                <div>
+                  estimator
+                </div>
+                <div>
+                  <label for="estimator">Method for aggregating across multiple observations of the y variable at the same x level</label>
+                </div>
+                <div>
+                  <input id="estimator" type="text" name="estimator" placeholder="Enter the function name" value="default">
+                </div>
+              </li>
+
+              <li class="">
+                <div>
+                  ci
+                </div>
+                <div>
+                  <label for="ci">Size of Confidence Interval (a float, or "sd", or None) </label>
+                </div>
+                <div>
+                  <input id="ci" type="text" name="ci" placeholder="int or 'sd' or None" value="default">
+                </div>
+              </li>
+              
+              <li class="">
+                <div>
+                  n_boot
+                </div>
+                <div>
+                  <label for="n_boot">Number of bootstrap iterations to use</label>
+                </div>
+                <div>
+                  <input id="n_boot" type="text" name="n_boot" placeholder="int" value="default">
+                </div>
+              </li>
+
+              <li class="">
+                <div>
+                  seed
+                </div>
+                <div>
+                  <label for="seed">Seed or random number generator for reproducible bootstrapping </label>
+                </div>
+                <div>
+                  <input id="seed" type="text" name="seed" placeholder="int, numpy.random.Generator, or numpy.random.RandomState" value="default">
+                </div>
+              </li>
+
+
+              <li class="">
+                <div>
+                  sort
+                </div>
+                <div>
+                  <label for="sort">Whether to sort data by the x and y variables</label>
+                </div>
+                <div>
+                    <select id="sort" name="sort">
+                    <option value="default"> default </option>
+                    <option value="True"> True </option>
+                    <option value="False"> False </option>
+                  </select>
+                </div>
+              </li>
+
+              <li class="">
+                <div>
+                  err_style
+                </div>
+                <div>
+                  <label for="err_style">Whether to draw the confidence intervals with translucent error bands or discrete error bars</label>
+                </div>
+                <div>
+                  <input id="err_style" type="text" name="err_style" placeholder="'band' or 'bars'" value="default">
+                </div>
+              </li>
+
+              <li class="">
+                <div>
+                  err_kws
+                </div>
+                <div>
+                  <label for="err_kws">Additional parameters to control the aesthetics of the error bars.</label>
+                </div>
+                <div>
+                  <input id="err_kws" type="text" name="err_kws" placeholder="dict of keyword arguments" value="default">
+                </div>
+              </li>
+
+              <li class="">
+                <div>
+                  legend
+                </div>
+                <div>
+                  <label for="legend">How to draw the legend</label>
+                </div>
+                <div>
+                    <select id="legend" name="legend">
+                    <option value="default"> default </option>
+                    <option value="auto"> auto </option>
+                    <option value="brief"> brief </option>
+                    <option value="full"> full </option>
+                    <option value="False"> False </option>
+                  </select>
+                </div>
+              </li>
+
+              <li class="">
+                <div>
+                  ax
+                </div>
+                <div>
+                  <label for="ax">Axes object to draw the plot onto</label>
+                </div>
+                <div>
+                  <input id="ax" type="text" name="ax" placeholder="matplotlib axes" value="default">
+                </div>
+              </li>
+            </ul>
+            <button>
+              SUBMIT!
+            </button>
+          </form>
         <%end%>
 
         <%if @the_type == "Scatter Plot"%>
-          Scatter Plot
+          <div>
+          <a href="https://seaborn.pydata.org/generated/seaborn.scatterplot.html">
+              More Info on scatter plot Arguments...
+          </a>
+          </div>
+          <form action="" class="">
+            <ul class="">
+              Must haves:
+              <li class="">
+                <div>
+                  <label for="x"> Name of X Variable </label>
+                </div>
+                <div>
+                  <input id="x" type="text" name="x" placeholder="Enter the name of X variable...">
+                </div>
+              </li>
+              <li class="">
+                <div>
+                  <label for="y"> Name of Y Variable </label>
+                </div>
+                <div>
+                  <input id="y" type="text" name="y" placeholder="Enter the name of Y variable...">
+                </div>
+              </li>
+              <li class="">
+                <div>
+                  <label for="data"> Name of Dataset </label>
+                </div>
+                <div>
+                  <input id="data" type="text" name="data" placeholder="Enter the name of dataset...">
+                </div>
+              </li>
+            </ul>  
+
+            <ul>
+              Recommended Optionals:
+              <li class="">
+                <div>
+                  <label for="set_title"> A title </label>
+                </div>
+                <div>
+                  <input id="set_title" type="text" name="set_title" placeholder="The title name you want..." value="default">
+                </div>
+              </li>
+              <li class="">
+                <div>
+                  <label for="set_xlabel"> X axis label </label>
+                </div>
+                <div>
+                  <input id="set_xlabel" type="text" name="set_xlabel" placeholder="The axis name you want..." value="default">
+                </div>
+              </li>
+              <li class="">
+                <div>
+                  <label for="set_ylabel"> Y axis label </label>
+                </div>
+                <div>
+                  <input id="set_ylabel" type="text" name="set_ylabel" placeholder="The axis name you want..." value="default">
+                </div>
+              </li>
+            </ul>
+
+
+            <ul class="">
+              Advanced Optionals:
+              <li class="">
+                <div>
+                  hue
+                </div>
+                <div>
+                  <label for="hue"> Name of the Vector Variable (e.g. "Smoker_dummy", "Male_dummy")</label>
+                </div>
+                <div>
+                  <input id="hue" type="text" name="hue" placeholder="Separates your X by a vector variable" value="default">
+                </div>
+              </li>
+              
+              <li class="">
+                <div>
+                  size
+                </div>
+                <div>
+                  <label for="size"> Grouping variable that produces lines with different widths</label>
+                </div>
+                <div>
+                  <input id="size" type="text" name="size" placeholder="vector or key in data" value="default">
+                </div>
+              </li>
+
+              <li class="">
+                <div>
+                  style
+                </div>
+                <div>
+                  <label for="style">Grouping variable that produces lines with different dashes and/or markers</label>
+                </div>
+                <div>
+                  <input id="style" type="text" name="style" placeholder="vector or key in data" value="default">
+                </div>
+              </li>
+
+              <li class="">
+                <div>
+                  palette
+                </div>
+                <div>
+                  <label for="palette">Colors to use for different levels of hue variable, details check color_palette()</label>
+                </div>
+                <div>
+                  <input id="palette" type="text" name="palette" placeholder="Enter color palette" value="default">
+                </div>
+              </li>
+
+              <li class="">
+                <div>
+                  hue_order
+                </div>
+                <div>
+                  <label for="hue_order"> Order of the Vector Variable Categories (enter a list of hue names, e.g. ["a","b","c"])</label>
+                </div>
+                <div>
+                  <input id="hue_order" type="text" name="hue_order" placeholder="Order to plot the categorical levels in" value="default">
+                </div>
+              </li>
+
+              <li class="">
+                <div>
+                  hue_norm
+                </div>
+                <div>
+                  <label for="hue_norm">Set the normalization range</label>
+                </div>
+                <div>
+                  <input id="hue_norm" type="text" name="hue_norm" placeholder="tuple or matplotlib.colors.Normalize" value="default">
+                </div>
+              </li>
+              
+              <li class="">
+                <div>
+                  sizes
+                </div>
+                <div>
+                  <label for="sizes">Object that determines how sizes are chosen</label>
+                </div>
+                <div>
+                  <input id="sizes" type="text" name="sizes" placeholder="list, dict, or tuple" value="default">
+                </div>
+              </li>
+              
+              <li class="">
+                <div>
+                  size_order
+                </div>
+                <div>
+                  <label for="size_order">Specified order for appearance of the size variable levels</label>
+                </div>
+                <div>
+                  <input id="size_order" type="text" name="size_order" placeholder="list" value="default">
+                </div>
+              </li>
+              
+              <li class="">
+                <div>
+                  size_norm
+                </div>
+                <div>
+                  <label for="size_norm">Normalization in data units for scaling plot objects when the size variable is numeric</label>
+                </div>
+                <div>
+                  <input id="size_norm" type="text" name="size_norm" placeholder="tuple or Normalize object" value="default">
+                </div>
+              </li>
+              
+              <li class="">
+                <div>
+                  markers
+                </div>
+                <div>
+                  <label for="markers">Object determining how to draw the markers for different levels of the style variable</label>
+                </div>
+                <div>
+                  <input id="markers" type="text" name="markers" placeholder="boolean, list, or dict" value="default">
+                </div>
+              </li>
+              
+              <li class="">
+                <div>
+                  style_order
+                </div>
+                <div>
+                  <label for="style_order">Specified order for appearance of the style variable levels</label>
+                </div>
+                <div>
+                  <input id="style_order" type="text" name="style_order" placeholder="list" value="default">
+                </div>
+              </li>
+              
+              <li class="">
+                <div>
+                  {x,y}_bins
+                </div>
+                <div>
+                  <label for="{x,y}_bins">Currently non-functional</label>
+                </div>
+                <div>
+                  <input id="{x,y}_bins" type="text" name="{x,y}_bins" placeholder="lists or array or functions" value="default">
+                </div>
+              </li>
+
+              <li class="">
+                <div>
+                  units             
+                </div>
+                <div>
+                  <label for="units">Identifier of sampling units </label>
+                </div>
+                <div>
+                  <input id="units" type="text" name="units" placeholder="vector or key in data" value="default">
+                </div>
+              </li>
+
+              <li class="">
+                <div>
+                  estimator
+                </div>
+                <div>
+                  <label for="estimator">Method for aggregating across multiple observations of the y variable at the same x level</label>
+                </div>
+                <div>
+                  <input id="estimator" type="text" name="estimator" placeholder="Enter the function name" value="default">
+                </div>
+              </li>
+
+              <li class="">
+                <div>
+                  ci
+                </div>
+                <div>
+                  <label for="ci">Size of Confidence Interval (a float, or "sd", or None) </label>
+                </div>
+                <div>
+                  <input id="ci" type="text" name="ci" placeholder="int or 'sd' or None" value="default">
+                </div>
+              </li>
+              
+              <li class="">
+                <div>
+                  n_boot
+                </div>
+                <div>
+                  <label for="n_boot">Number of bootstrap iterations to use</label>
+                </div>
+                <div>
+                  <input id="n_boot" type="text" name="n_boot" placeholder="int" value="default">
+                </div>
+              </li>
+
+              <li class="">
+                <div>
+                  alpha
+                </div>
+                <div>
+                  <label for="alpha">Proportional opacity of the points </label>
+                </div>
+                <div>
+                  <input id="alpha" type="text" name="alpha" placeholder="float" value="default">
+                </div>
+              </li>
+              
+              <li class="">
+                <div>
+                  {x,y}_jitter
+                </div>
+                <div>
+                  <label for="{x,y}_jitter">Currently non-functional </label>
+                </div>
+                <div>
+                  <input id="{x,y}_jitter" type="text" name="{x,y}_jitter" placeholder="booleans or floats" value="default">
+                </div>
+              </li>
+
+              <li class="">
+                <div>
+                  legend
+                </div>
+                <div>
+                  <label for="legend">How to draw the legend</label>
+                </div>
+                <div>
+                    <select id="legend" name="legend">
+                    <option value="default"> default </option>
+                    <option value="auto"> auto </option>
+                    <option value="brief"> brief </option>
+                    <option value="full"> full </option>
+                    <option value="False"> False </option>
+                  </select>
+                </div>
+              </li>
+              
+              <li class="">
+                <div>
+                  ax
+                </div>
+                <div>
+                  <label for="ax">Axes object to draw the plot onto</label>
+                </div>
+                <div>
+                  <input id="ax" type="text" name="ax" placeholder="matplotlib axes" value="default">
+                </div>
+              </li>
+            </ul>
+            <button>
+              SUBMIT!
+            </button>
+          </form>
         <%end%>
       </div>
-  
-  
-  
   </body>
 
 </html>

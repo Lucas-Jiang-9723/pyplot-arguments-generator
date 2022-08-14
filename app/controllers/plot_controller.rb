@@ -13,15 +13,15 @@ class PlotController < ApplicationController
     @the_type = params.fetch("the_type")
     
     if @the_type=="Bar Chart"
-      @function = "sn.barplot"
+      @function = "sns.barplot"
     elsif @the_type=="Box Plot"
-      @function = "sn.boxplot"
+      @function = "sns.boxplot"
     elsif @the_type=="Histogram"
-      @function = "sn.histplot"
+      @function = "sns.histplot"
     elsif @the_type=="Line Chart"
-      @function = "sn.lineplot"
+      @function = "sns.lineplot"
     elsif @the_type=="Scatter Plot"
-      @function = "sn.scatterplot"
+      @function = "sns.scatterplot"
     end
     render({:template => "plot/argument.html.erb"})
   end

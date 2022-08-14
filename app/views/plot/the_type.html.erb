@@ -7,7 +7,11 @@
       Please fill in the corresponding argument options and click the SUBMIT button when finished!
     </div>
     <div class="">
-      Note: For optionals, if you leave them be, they will use default arguments.
+      <ol>
+      Note:
+        <li>For optionals, if you leave them be, they will use default arguments.</li>
+        <li>When the arguments entered are strings, please do type the quotation marks as well(e.g. x="var1").</li>
+      </ol>
     </div>
   </head>
 
@@ -19,7 +23,7 @@
       <div class="">
         <%if @the_type == "Bar Chart"%>
           <div>
-          <a href="https://seaborn.pydata.org/generated/seaborn.barplot.html#seaborn.barplot">
+          <a href="https://seaborn.pydata.org/generated/seaborn.barplot.html#seaborn.barplot" target="_blank">
               More Info on bar plot Arguments...
           </a>
           </div>
@@ -105,8 +109,8 @@
                 <div>
                     <select id="order" name="order">
                     <option value="default"> default </option>
-                    <option value="ascending"> Ascending </option>
-                    <option value="descending"> Descending </option>
+                    <option value='"ascending"'> Ascending </option>
+                    <option value='"descending"'> Descending </option>
                   </select>
                 </div>
               </li>
@@ -193,8 +197,8 @@
                 <div>
                     <select id="orient" name="orient">
                     <option value="default"> default </option>
-                    <option value="v"> vertical </option>
-                    <option value="h"> horizontal </option>
+                    <option value='"v"'> vertical </option>
+                    <option value='"h"'> horizontal </option>
                   </select>
                 </div>
               </li>
@@ -324,7 +328,7 @@
 
         <%if @the_type == "Box Plot"%>
           <div>
-            <a href="https://seaborn.pydata.org/generated/seaborn.boxplot.html">
+            <a href="https://seaborn.pydata.org/generated/seaborn.boxplot.html" target="_blank">
                 More Info on box plot Arguments...
             </a>
           </div>
@@ -410,8 +414,8 @@
                 <div>
                     <select id="order" name="order">
                     <option value="default"> default </option>
-                    <option value="ascending"> Ascending </option>
-                    <option value="descending"> Descending </option>
+                    <option value='"ascending"'> Ascending </option>
+                    <option value='"descending"'> Descending </option>
                   </select>
                 </div>
               </li>
@@ -438,8 +442,8 @@
                 <div>
                     <select id="orient" name="orient">
                     <option value="default"> default </option>
-                    <option value="v"> vertical </option>
-                    <option value="h"> horizontal </option>
+                    <option value='"v"'> vertical </option>
+                    <option value='"h"'> horizontal </option>
                   </select>
                 </div>
               </li>
@@ -564,7 +568,7 @@
 
         <%if @the_type == "Histogram"%>
           <div>
-            <a href="https://seaborn.pydata.org/generated/seaborn.histplot.html">
+            <a href="https://seaborn.pydata.org/generated/seaborn.histplot.html" target="_blank">
                 More Info on histogram Arguments...
             </a>
           </div>
@@ -650,11 +654,12 @@
                 </div>
                 <div>
                     <select id="stat" name="stat">
-                    <option value="count"> count </option>
-                    <option value="frequency"> frequency </option>
-                    <option value="probability"> probability/proportion </option>
-                    <option value="percent"> percent </option>
-                    <option value="density"> density </option>
+                    <option value='default'> default </option>
+                    <option value='"count"'> count </option>
+                    <option value='"frequency"'> frequency </option>
+                    <option value='"probability"'> probability/proportion </option>
+                    <option value='"percent"'> percent </option>
+                    <option value='"density"'> density </option>
                   </select>
                 </div>
               </li>
@@ -769,10 +774,10 @@
                 <div>
                     <select id="multiple" name="multiple">
                     <option value="default"> default </option>
-                    <option value="layer"> layer </option>
-                    <option value="dodge"> dodge </option>
-                    <option value="stack"> stack </option>
-                    <option value="fill"> fill </option>
+                    <option value='"layer"'> layer </option>
+                    <option value='"dodge"'> dodge </option>
+                    <option value='"stack"'> stack </option>
+                    <option value='"fill"'> fill </option>
                   </select>
                 </div>
               </li>
@@ -787,9 +792,9 @@
                 <div>
                     <select id="element" name="element">
                     <option value="default"> default </option>
-                    <option value="bars"> bars </option>
-                    <option value="step"> step </option>
-                    <option value="poly"> poly </option>
+                    <option value='"bars"'> bars </option>
+                    <option value='"step"'> step </option>
+                    <option value='"poly"'> poly </option>
                   </select>
                 </div>
               </li>
@@ -1035,7 +1040,7 @@
 
         <%if @the_type == "Line Chart"%>
           <div>
-          <a href="https://seaborn.pydata.org/generated/seaborn.lineplot.html">
+          <a href="https://seaborn.pydata.org/generated/seaborn.lineplot.html" target="_blank">
               More Info on line plot Arguments...
           </a>
           </div>
@@ -1354,9 +1359,9 @@
                 <div>
                     <select id="legend" name="legend">
                     <option value="default"> default </option>
-                    <option value="auto"> auto </option>
-                    <option value="brief"> brief </option>
-                    <option value="full"> full </option>
+                    <option value='"auto"'> auto </option>
+                    <option value='"brief"'> brief </option>
+                    <option value='"full"'> full </option>
                     <option value="False"> False </option>
                   </select>
                 </div>
@@ -1382,7 +1387,7 @@
 
         <%if @the_type == "Scatter Plot"%>
           <div>
-          <a href="https://seaborn.pydata.org/generated/seaborn.scatterplot.html">
+          <a href="https://seaborn.pydata.org/generated/seaborn.scatterplot.html" target="_blank">
               More Info on scatter plot Arguments...
           </a>
           </div>
@@ -1672,9 +1677,9 @@
                 <div>
                     <select id="legend" name="legend">
                     <option value="default"> default </option>
-                    <option value="auto"> auto </option>
-                    <option value="brief"> brief </option>
-                    <option value="full"> full </option>
+                    <option value='"auto"'> auto </option>
+                    <option value='"brief"'> brief </option>
+                    <option value='"full"'> full </option>
                     <option value="False"> False </option>
                   </select>
                 </div>

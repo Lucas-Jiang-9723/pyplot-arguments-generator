@@ -1,2 +1,32 @@
-<h1> <%=@the_type%> arguments </h1>
-<h1> <%= @function %> </h1>
+<h1> Your <%=@the_type%> arguments have been generated below:</h1>
+  <div>
+    <h1>
+    <%if params.fetch("ax")!="default"%>
+      <%arg_str_0=params.fetch("ax")%>
+    <%else%>
+      <%arg_str_0="ax"%>
+    <%end%>
+    <%arg_str=arg_str_0+"="+@function.to_s+"("%>
+    <%params.keys.each do |a_key|%>
+      <% if (a_key !="controller" && a_key !="action" && a_key !="the_type" && a_key!="set_title" && a_key!="set_xlabel" && a_key!="set_ylabel")%>
+        <%if params.fetch(a_key)!="default"%>
+          <%arg_str = arg_str+"#{a_key}=#{params.fetch(a_key)},"%>
+        <%end%>
+      <%end%>
+    <%end%>
+    <%arg_str=arg_str[0...-1]+")"%>
+<link rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.0.3/styles/default.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.0.3/highlight.min.js"></script>
+  <script>hljs.initHighlightingOnLoad();</script>
+<pre><code class="python">
+import seaborn as sns
+<%=arg_str%>
+    <%params.keys.each do |a_key|%>
+      <% if (a_key=="set_title" || a_key=="set_xlabel" || a_key=="set_ylabel") && params.fetch(a_key)!="default"%>
+<%=arg_str_0+".#{a_key}(#{params.fetch(a_key)})"%>
+      <%end%>
+    <%end%>
+</code></pre>
+    </h1>
+  </div>

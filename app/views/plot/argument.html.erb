@@ -10,14 +10,18 @@
     <%arg_str=arg_str_0+"="+@function.to_s+"("%>
     <%params.keys.each do |a_key|%>
       <% if (a_key !="controller" && a_key !="action" && a_key !="the_type" && a_key!="set_title" && a_key!="set_xlabel" && a_key!="set_ylabel")%>
-        <%if params.fetch(a_key)!="default"%>
+        <%if params.fetch(a_key)!="default" && params.fetch(a_key).strip!=""%>
           <%arg_str = arg_str+"#{a_key}=#{params.fetch(a_key)},"%>
         <%end%>
       <%end%>
     <%end%>
-    <%arg_str=arg_str[0...-1]+")"%>
-<%if arg_str.include?("=,") || arg_str.include?("=)")||arg_str.chomp(")").strip[-1]=="="%>
-    <h5 class="alert alert-danger" role="alert">Attention: some critical argument(s) missing, please check your input!
+    <%if arg_str[-1] !="("%>
+      <%arg_str=arg_str[0...-1]+")"%>
+    <%else%>
+      <%arg_str=arg_str+" )"%>
+    <%end%>
+<%if arg_str.include?("=,") || arg_str.include?("=)")||arg_str.chomp(")").strip[-1]=="("%>
+    <h5 class="alert alert-danger" role="alert">Attention: You may want to double check your input.
     <a href = "javascript:history.back()">Click here to revise</a></h5>
 <%end%>
 <link rel="stylesheet"
@@ -37,7 +41,7 @@ import seaborn as sns
     </h1>
   </div>
 
-<%if arg_str.include?("=,")==false && arg_str.include?("=)")==false && arg_str.chomp(")").strip[-1]!="="%>
+<%if arg_str.include?("=,")==false && arg_str.include?("=)")==false && arg_str.chomp(")").strip[-1]!="("%>
     <h5><div class="alert alert-success" role="alert">
       Yay! Copy and paste the code above to your python script and see if it works!
     </div></h5>

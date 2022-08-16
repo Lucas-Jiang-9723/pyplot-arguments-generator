@@ -1,3 +1,4 @@
+<div class= "whole">
 <br>
 <h2> Your <%=@the_type%> arguments have been generated below:</h2>
   <div>
@@ -43,6 +44,8 @@ import seaborn as sns
 
 <%if arg_str.include?("=,")==false && arg_str.include?("=)")==false && arg_str.chomp(")").strip[-1]!="("%>
     <h5><div class="alert alert-success" role="alert">
-      Yay! Copy and paste the code above to your python script and see if it works!
+      <p>Yay! Copy and paste the code above to your python script and see if it works!</p>
+      <p>Want to alter the existing arguments? <a href = "javascript:history.back()">Click here to revise</a></p>
     </div></h5>
 <%end%>
+</div>

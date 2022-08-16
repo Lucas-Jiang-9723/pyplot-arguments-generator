@@ -1,1899 +1,1900 @@
 <html>
-  <head>
-  <style>
-    .ctr{
-      text-align: center;
-    }
-  </style>
-       <br>
-    <div class="">
-      <h2><%= @the_type%></h2>
-    </div>
-    <div class=""><h5>
-      Please fill in the corresponding argument options and click the SUBMIT button when finished!
-    </h5></div>
-    <div class="">
-      <br>
-      <h4>Note: </h4>
-      <h5>
-      <ol>
-        <li>For optionals, if you leave them be, they will use default arguments.</li>
-        <li>When the arguments entered are strings, please do type the quotation marks as well(e.g. x="var1").</li>
-      </ol>
-      </h5>
-    </div>
-  </head>
-  <br>
-  </body>
+  <div class = "whole">
+    <head>
+    <style>
+      .ctr{
+        text-align: center;
+      }
+    </style>
+        <br>
       <div class="">
-        <h4>My <%= @the_type%> will have the following arguments...</h4>
+        <h2><%= @the_type%></h2>
       </div>
-
+      <div class=""><h5>
+        Please fill in the corresponding argument options and click the SUBMIT button when finished!
+      </h5></div>
       <div class="">
-        <%if @the_type == "Bar Chart"%>
-          <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
-            <symbol id="check-circle-fill" fill="currentColor" viewBox="0 0 16 16">
-              <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"/>
-            </symbol>
-            <symbol id="info-fill" fill="currentColor" viewBox="0 0 16 16">
-              <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm.93-9.412-1 4.705c-.07.34.029.533.304.533.194 0 .487-.07.686-.246l-.088.416c-.287.346-.92.598-1.465.598-.703 0-1.002-.422-.808-1.319l.738-3.468c.064-.293.006-.399-.287-.47l-.451-.081.082-.381 2.29-.287zM8 5.5a1 1 0 1 1 0-2 1 1 0 0 1 0 2z"/>
-            </symbol>
-            <symbol id="exclamation-triangle-fill" fill="currentColor" viewBox="0 0 16 16">
-              <path d="M8.982 1.566a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566zM8 5c.535 0 .954.462.9.995l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 5.995A.905.905 0 0 1 8 5zm.002 6a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
-            </symbol>
-          </svg>
+        <br>
+        <h4>Note: </h4>
+        <h5>
+        <ol>
+          <li>For optionals, if you leave them be, they will use default arguments.</li>
+          <li>When the arguments entered are strings, please do type the quotation marks as well(e.g. x="var1").</li>
+        </ol>
+        </h5>
+      </div>
+    </head>
+    <br>
+    </body>
+        <div class="">
+          <h4>My <%= @the_type%> will have the following arguments...</h4>
+        </div>
 
-          <div class="alert alert-primary d-flex align-items-center" role="alert">
-            <svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Info:"><use xlink:href="#info-fill"/></svg>
-            <div>
-              <a href="https://seaborn.pydata.org/generated/seaborn.barplot.html#seaborn.barplot" target="_blank">
-                  More Info on bar plot Arguments...
-              </a>
+        <div class="">
+          <%if @the_type == "Bar Chart"%>
+            <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+              <symbol id="check-circle-fill" fill="currentColor" viewBox="0 0 16 16">
+                <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"/>
+              </symbol>
+              <symbol id="info-fill" fill="currentColor" viewBox="0 0 16 16">
+                <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm.93-9.412-1 4.705c-.07.34.029.533.304.533.194 0 .487-.07.686-.246l-.088.416c-.287.346-.92.598-1.465.598-.703 0-1.002-.422-.808-1.319l.738-3.468c.064-.293.006-.399-.287-.47l-.451-.081.082-.381 2.29-.287zM8 5.5a1 1 0 1 1 0-2 1 1 0 0 1 0 2z"/>
+              </symbol>
+              <symbol id="exclamation-triangle-fill" fill="currentColor" viewBox="0 0 16 16">
+                <path d="M8.982 1.566a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566zM8 5c.535 0 .954.462.9.995l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 5.995A.905.905 0 0 1 8 5zm.002 6a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
+              </symbol>
+            </svg>
+
+            <div class="alert alert-primary d-flex align-items-center" role="alert">
+              <svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Info:"><use xlink:href="#info-fill"/></svg>
+              <div>
+                <a href="https://seaborn.pydata.org/generated/seaborn.barplot.html#seaborn.barplot" target="_blank">
+                    More Info on bar plot Arguments...
+                </a>
+              </div>
             </div>
-          </div>
+            
+            <form action="/arguments/<%=@the_type%>" class="">
+              <div class="accordion" id="accordionExample">
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="headingOne">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                      <strong> Commonly used arguements </strong>
+                    </button>
+                  </h2>
+                  <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                      
+                        <strong>
+                          <label for="x"> Name of X Variable </label>
+                        </strong>
+                        <div>
+                          <input id="x" type="text" name="x" placeholder="Enter the name of X variable...">
+                        </div>
+                        <br>
+                      
+                        <strong>
+                          <label for="y"> Name of Y Variable </label>
+                        </strong>
+                        <div>
+                          <input id="y" type="text" name="y" placeholder="Enter the name of Y variable...">
+                        </div>
+                        <br>
+                      
+                        <strong>
+                          <label for="data"> Name of Dataset </label>
+                        </strong>
+                        <div>
+                          <input id="data" type="text" name="data" placeholder="Enter the name of dataset...">
+                        </div>
+                        <br>
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="headingTwo">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                      <strong> Recommended Optionals </strong>
+                    </button>
+                  </h2>
+                  <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                      
+                        <strong>
+                          <label for="set_title"> A title </label>
+                        </strong>
+                        <div>
+                          <input id="set_title" type="text" name="set_title" placeholder="The title name you want..." value="default">
+                        </div>
+                        <br>
+                      
+                        <strong>
+                          <label for="set_xlabel"> X axis label </label>
+                        </strong>
+                        <div>
+                          <input id="set_xlabel" type="text" name="set_xlabel" placeholder="The axis name you want..." value="default">
+                        </div>
+                        <br>
+                      
+                        <strong>
+                          <label for="set_ylabel"> Y axis label </label>
+                        </strong>
+                        <div>
+                          <input id="set_ylabel" type="text" name="set_ylabel" placeholder="The axis name you want..." value="default">
+                        </div>
+                        <br>
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="headingThree">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                      <strong> Advanced Optionals </strong>
+                    </button>
+                  </h2>
+                  <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                      
+                        <strong>
+                          hue
+                        </strong>
+                        <div>
+                          <label for="hue"> Name of the Vector Variable (e.g. "Smoker_dummy", "Male_dummy")</label>
+                        </div>
+                        <div>
+                          <input id="hue" type="text" name="hue" placeholder="Separates your X by a vector variable" value="default">
+                        </div>
+                        <br>
+
+                      
+                        <strong>
+                          order
+                        </strong>
+                        <div>
+                          <label for="order"> Order to plot the categorical levels in (ascending/descending)</label>
+                        </div>
+                        <div>
+                            <select id="order" name="order">
+                            <option value="default"> default </option>
+                            <option value='"ascending"'> Ascending </option>
+                            <option value='"descending"'> Descending </option>
+                          </select>
+                        </div>
+                        <br>
+
+                      
+                        <strong>
+                          hue_order
+                        </strong>
+                        <div>
+                          <label for="hue_order"> Order of the Vector Variable Categories (enter a list of hue names, e.g. ["a","b","c"])</label>
+                        </div>
+                        <div>
+                          <input id="hue_order" type="text" name="hue_order" placeholder="Order to plot the categorical levels in" value="default">
+                        </div>
+                        <br>
+
+                      
+                        <strong>
+                          estimator
+                        </strong>
+                        <div>
+                          <label for="estimator">Statistical function to estimate within each categorical bin (e.g. mean, np.mean) </label>
+                        </div>
+                        <div>
+                          <input id="estimator" type="text" name="estimator" placeholder="Enter the function name" value="default">
+                        </div>
+                        <br>
+
+                      
+                        <strong>
+                          ci
+                        </strong>
+                        <div>
+                          <label for="ci">Size of Confidence Interval (a float, or "sd", or None) </label>
+                        </div>
+                        <div>
+                          <input id="ci" type="text" name="ci" placeholder="Enter the Confidence Interval" value="default">
+                        </div>
+                        <br>
+
+                      
+                        <strong>
+                          n_boot
+                        </strong>
+                        <div>
+                          <label for="n_boot">Number of bootstrap iterations to use (int) </label>
+                        </div>
+                        <div>
+                          <input id="n_boot" type="text" name="n_boot" placeholder="Number of bootstrap iterations" value="default">
+                        </div>
+                        <br>
+
+                      
+                        <strong>
+                          units             
+                        </strong>
+                        <div>
+                          <label for="units">Identifier of sampling units </label>
+                        </div>
+                        <div>
+                          <input id="units" type="text" name="units" placeholder="Name of variale in data or vector data" value="default">
+                        </div>
+                        <br>
+
+                      
+                        <strong>
+                          seed
+                        </strong>
+                        <div>
+                          <label for="seed">Seed (int, numpy.random.Generator, or numpy.random.RandomState, etc.) </label>
+                        </div>
+                        <div>
+                          <input id="seed" type="text" name="seed" placeholder="Seed or random number generator for reproducible bootstrapping" value="default">
+                        </div>
+                        <br>
+
+                      
+                        <strong>
+                          orient
+                        </strong>
+                        <div>
+                          <label for="orient"> Vertical or horizontal</label>
+                        </div>
+                        <div>
+                            <select id="orient" name="orient">
+                            <option value="default"> default </option>
+                            <option value='"v"'> vertical </option>
+                            <option value='"h"'> horizontal </option>
+                          </select>
+                        </div>
+                        <br>
+
+                      
+                        <strong>
+                          color
+                        </strong>
+                        <div>
+                          <label for="color">Color for all elements</label>
+                        </div>
+                        <div>
+                          <input id="color" type="text" name="color" placeholder="Enter color" value="default">
+                        </div>
+                        <br>
+
+                      
+                        <strong>
+                          palette
+                        </strong>
+                        <div>
+                          <label for="palette">Colors to use for different levels of hue variable, details check color_palette()</label>
+                        </div>
+                        <div>
+                          <input id="palette" type="text" name="palette" placeholder="Enter color palette" value="default">
+                        </div>
+                        <br>
+
+                      
+                        <strong>
+                          saturation  
+                        </strong>
+                        <div>
+                          <label for="saturation">Proportion of the original saturation to draw colors at</label>
+                        </div>
+                        <div>
+                          <input id="saturation" type="text" name="saturation" placeholder="Enter float" value="default">
+                        </div>
+                        <br>
+                      
+                      
+                        <strong>
+                          errcolor  
+                        </strong>
+                        <div>
+                          <label for="errcolor">Color for the lines that represent the confidence interval</label>
+                        </div>
+                        <div>
+                          <input id="errcolor" type="text" name="errcolor" placeholder="Enter errcolor" value="default">
+                        </div>
+                        <br>
+                      
+                      
+                        <strong>
+                          errwidth
+                        </strong>
+                        <div>
+                          <label for="errwidth">Thickness of error bar lines (and caps)</label>
+                        </div>
+                        <div>
+                          <input id="errwidth" type="text" name="errwidth" placeholder="Enter float" value="default">
+                        </div>
+                        <br>
+                      
+                      
+                        <strong>
+                          capsize
+                        </strong>
+                        <div>
+                          <label for="capsize">Width of the caps on error bars</label>
+                        </div>
+                        <div>
+                          <input id="capsize" type="text" name="capsize" placeholder="Enter float" value="default">
+                        </div>
+                        <br>
+                      
+                      
+                        <strong>
+                          dodge
+                        </strong>
+                        <div>
+                          <label for="dodge">Whether elements should be shifted along the categorical axis</label>
+                        </div>
+                        <div>
+                            <select id="dodge" name="dodge">
+                            <option value="default"> default </option>
+                            <option value="True"> True </option>
+                            <option value="False"> False </option>
+                          </select>
+                        </div>
+                        <br>
+                      
+                      
+                        <strong>
+                          ax
+                        </strong>
+                        <div>
+                          <label for="ax">Axes object to draw the plot onto</label>
+                        </div>
+                        <div>
+                          <input id="ax" type="text" name="ax" placeholder="matplotlib axes" value="default">
+                        </div>
+                        <br>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <br>
+              <div class="ctr">
+                <button class="btn btn-primary btn-lg">SUBMIT!</button>
+              </div>
+              <br>
+            </form>
+          <%end%>
+
+
+
+          <%if @the_type == "Box Plot"%>
+            <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+              <symbol id="check-circle-fill" fill="currentColor" viewBox="0 0 16 16">
+                <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"/>
+              </symbol>
+              <symbol id="info-fill" fill="currentColor" viewBox="0 0 16 16">
+                <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm.93-9.412-1 4.705c-.07.34.029.533.304.533.194 0 .487-.07.686-.246l-.088.416c-.287.346-.92.598-1.465.598-.703 0-1.002-.422-.808-1.319l.738-3.468c.064-.293.006-.399-.287-.47l-.451-.081.082-.381 2.29-.287zM8 5.5a1 1 0 1 1 0-2 1 1 0 0 1 0 2z"/>
+              </symbol>
+              <symbol id="exclamation-triangle-fill" fill="currentColor" viewBox="0 0 16 16">
+                <path d="M8.982 1.566a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566zM8 5c.535 0 .954.462.9.995l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 5.995A.905.905 0 0 1 8 5zm.002 6a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
+              </symbol>
+            </svg>
+
+            <div class="alert alert-primary d-flex align-items-center" role="alert">
+              <svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Info:"><use xlink:href="#info-fill"/></svg>
+              <div>
+                <a href="https://seaborn.pydata.org/generated/seaborn.boxplot.html" target="_blank">
+                    More Info on box plot Arguments...
+                </a>
+              </div>
+            </div>
+            <form action="/arguments/<%=@the_type%>" class="">
+              <div class="accordion" id="accordionExample">
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="headingOne">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                      <strong> Commonly used arguements </strong>
+                    </button>
+                  </h2>
+                  <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                      
+                        <strong>
+                          <label for="x"> Name of X Variable </label>
+                        </strong>
+                        <div>
+                          <input id="x" type="text" name="x" placeholder="Enter the name of X variable...">
+                        </div>
+                        <br>
+                      
+                        <strong>
+                          <label for="y"> Name of Y Variable </label>
+                        </strong>
+                        <div>
+                          <input id="y" type="text" name="y" placeholder="Enter the name of Y variable...">
+                        </div>
+                        <br>
+                      
+                        <strong>
+                          <label for="data"> Name of Dataset </label>
+                        </strong>
+                        <div>
+                          <input id="data" type="text" name="data" placeholder="Enter the name of dataset...">
+                        </div>
+                        <br>
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="headingTwo">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                      <strong> Recommended Optionals </strong>
+                    </button>
+                  </h2>
+                  <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                      
+                        <strong>
+                          <label for="set_title"> A title </label>
+                        </strong>
+                        <div>
+                          <input id="set_title" type="text" name="set_title" placeholder="The title name you want..." value="default">
+                        </div>
+                        <br>
+                      
+                        <strong>
+                          <label for="set_xlabel"> X axis label </label>
+                        </strong>
+                        <div>
+                          <input id="set_xlabel" type="text" name="set_xlabel" placeholder="The axis name you want..." value="default">
+                        </div>
+                        <br>
+                      
+                        <strong>
+                          <label for="set_ylabel"> Y axis label </label>
+                        </strong>
+                        <div>
+                          <input id="set_ylabel" type="text" name="set_ylabel" placeholder="The axis name you want..." value="default">
+                        </div>
+                        <br>
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="headingThree">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                      <strong> Advanced Optionals </strong>
+                    </button>
+                  </h2>
+                  <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                      
+                        <strong>
+                          hue
+                        </strong>
+                        <div>
+                          <label for="hue"> Name of the Vector Variable (e.g. "Smoker_dummy", "Male_dummy")</label>
+                        </div>
+                        <div>
+                          <input id="hue" type="text" name="hue" placeholder="Separates your X by a vector variable" value="default">
+                        </div>
+                        <br>
+
+                      
+                        <strong>
+                          order
+                        </strong>
+                        <div>
+                          <label for="order"> Order to plot the categorical levels in (ascending/descending)</label>
+                        </div>
+                        <div>
+                            <select id="order" name="order">
+                            <option value="default"> default </option>
+                            <option value='"ascending"'> Ascending </option>
+                            <option value='"descending"'> Descending </option>
+                          </select>
+                        </div>
+                        <br>
+
+                      
+                        <strong>
+                          hue_order
+                        </strong>
+                        <div>
+                          <label for="hue_order"> Order of the Vector Variable Categories (enter a list of hue names, e.g. ["a","b","c"])</label>
+                        </div>
+                        <div>
+                          <input id="hue_order" type="text" name="hue_order" placeholder="Order to plot the categorical levels in" value="default">
+                        </div>
+                        <br>
           
-          <form action="/arguments/<%=@the_type%>" class="">
-            <div class="accordion" id="accordionExample">
-              <div class="accordion-item">
-                <h2 class="accordion-header" id="headingOne">
-                  <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                    <strong> Commonly used arguements </strong>
-                  </button>
-                </h2>
-                <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
-                  <div class="accordion-body">
-                    
-                      <strong>
-                        <label for="x"> Name of X Variable </label>
-                      </strong>
+                      
+                        <strong>
+                          orient
+                        </strong>
+                        <div>
+                          <label for="orient"> Vertical or horizontal</label>
+                        </div>
+                        <div>
+                            <select id="orient" name="orient">
+                            <option value="default"> default </option>
+                            <option value='"v"'> vertical </option>
+                            <option value='"h"'> horizontal </option>
+                          </select>
+                        </div>
+                        <br>
+
+                      
+                        <strong>
+                          color
+                        </strong>
+                        <div>
+                          <label for="color">Color for all elements</label>
+                        </div>
+                        <div>
+                          <input id="color" type="text" name="color" placeholder="Enter color" value="default">
+                        </div>
+                        <br>
+
+                      
+                        <strong>
+                          palette
+                        </strong>
+                        <div>
+                          <label for="palette">Colors to use for different levels of hue variable, details check color_palette()</label>
+                        </div>
+                        <div>
+                          <input id="palette" type="text" name="palette" placeholder="Enter color palette" value="default">
+                        </div>
+                        <br>
+
+                      
+                        <strong>
+                          saturation  
+                        </strong>
+                        <div>
+                          <label for="saturation">Proportion of the original saturation to draw colors at</label>
+                        </div>
+                        <div>
+                          <input id="saturation" type="text" name="saturation" placeholder="Enter float" value="default">
+                        </div>
+                        <br>
+                      
+                      
+                        <strong>
+                          width
+                        </strong>
+                        <div>
+                          <label for="width">Width of a full element when not using hue nesting</label>
+                        </div>
+                        <div>
+                          <input id="width" type="text" name="width" placeholder="Enter float" value="default">
+                        </div>
+                        <br>
+
+                      
+                        <strong>
+                          dodge
+                        </strong>
+                        <div>
+                          <label for="dodge">Whether elements should be shifted along the categorical axis</label>
+                        </div>
+                        <div>
+                            <select id="dodge" name="dodge">
+                            <option value="default"> default </option>
+                            <option value="True"> True </option>
+                            <option value="False"> False </option>
+                          </select>
+                        </div>
+                        <br>
+
+                      
+                        <strong>
+                          fliersize
+                        </strong>
+                        <div>
+                          <label for="fliersize">Size of the markers used to indicate outlier observations</label>
+                        </div>
+                        <div>
+                          <input id="fliersize" type="text" name="fliersize" placeholder="Enter float" value="default">
+                        </div>
+                        <br>
+                      
+                      
+                        <strong>
+                          linewidth
+                        </strong>
+                        <div>
+                          <label for="linewidth">Width of the gray lines that frame the plot elements</label>
+                        </div>
+                        <div>
+                          <input id="linewidth" type="text" name="linewidth" placeholder="Enter float" value="default">
+                        </div>
+                        <br>
+                      
+                      
+                        <strong>
+                          whis
+                        </strong>
+                        <div>
+                          <label for="whis">Proportion of the IQR past the low and high quartiles to extend the plot whiskers</label>
+                        </div>
+                        <div>
+                          <input id="whis" type="text" name="whis" placeholder="Enter float" value="default">
+                        </div>
+                        <br>
+                      
+                      
+                        <strong>
+                          ax
+                        </strong>
+                        <div>
+                          <label for="ax">Axes object to draw the plot onto</label>
+                        </div>
+                        <div>
+                          <input id="ax" type="text" name="ax" placeholder="matplotlib axes" value="default">
+                        </div>
+                        <br>
+                  </div>
+                </div>
+              </div>
+              <br>
+              <div class="ctr">
+                <button class="btn btn-primary btn-lg">SUBMIT!</button>
+              </div>
+              <br>
+            </form>
+          <%end%>
+
+          <%if @the_type == "Histogram"%>
+            <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+              <symbol id="check-circle-fill" fill="currentColor" viewBox="0 0 16 16">
+                <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"/>
+              </symbol>
+              <symbol id="info-fill" fill="currentColor" viewBox="0 0 16 16">
+                <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm.93-9.412-1 4.705c-.07.34.029.533.304.533.194 0 .487-.07.686-.246l-.088.416c-.287.346-.92.598-1.465.598-.703 0-1.002-.422-.808-1.319l.738-3.468c.064-.293.006-.399-.287-.47l-.451-.081.082-.381 2.29-.287zM8 5.5a1 1 0 1 1 0-2 1 1 0 0 1 0 2z"/>
+              </symbol>
+              <symbol id="exclamation-triangle-fill" fill="currentColor" viewBox="0 0 16 16">
+                <path d="M8.982 1.566a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566zM8 5c.535 0 .954.462.9.995l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 5.995A.905.905 0 0 1 8 5zm.002 6a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
+              </symbol>
+            </svg>
+
+            <div class="alert alert-primary d-flex align-items-center" role="alert">
+              <svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Info:"><use xlink:href="#info-fill"/></svg>
+              <div>
+                <a href="https://seaborn.pydata.org/generated/seaborn.histplot.html" target="_blank">
+                  More Info on histogram Arguments...
+                </a>
+              </div>
+            </div>
+
+            <form action="/arguments/<%=@the_type%>" class="">
+              <div class="accordion" id="accordionExample">
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="headingOne">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                      <strong> Commonly used arguements </strong>
+                    </button>
+                  </h2>
+                  <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                      
+                        <strong>
+                          Name of data
+                        </strong>
+                        <div>
+                          <label for="data"> Input data structure: Either a long-form collection of vectors or a wide-form dataset. </label>
+                        </div>
+                        <div>
+                          <input id="data" type="text" name="data" placeholder="Enter the name of data...">
+                        </div>
+                        <br>
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="headingTwo">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                      <strong> Recommended Optionals </strong>
+                    </button>
+                  </h2>
+                  <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                      
+                        <strong>
+                          <label for="set_title"> A title </label>
+                        </strong>
+                        <div>
+                          <input id="set_title" type="text" name="set_title" placeholder="The title name you want..." value="default">
+                        </div>
+                        <br>
+                      
+                        <strong>
+                          <label for="x"> X axis specification </label>
+                        </strong>
+                        <div>
+                          <input id="x" type="text" name="x" placeholder="vector or keys in data" value="default">
+                        </div>
+                        <br>
+                      
+                        <strong>
+                          <label for="y"> Y axis specification </label>
+                        </strong>
+                        <div>
+                          <input id="y" type="text" name="y" placeholder="vector or keys in data" value="default">
+                        </div>
+                        <br>
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="headingThree">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                      <strong> Advanced Optionals </strong>
+                    </button>
+                  </h2>
+                  <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                      
+                        <strong>
+                          hue
+                        </strong>
+                        <div>
+                          <label for="hue"> Name of the Vector Variable (e.g. "Smoker_dummy", "Male_dummy")</label>
+                        </div>
+                        <div>
+                          <input id="hue" type="text" name="hue" placeholder="vector of keys in data" value="default">
+                        </div>
+                        <br>
+                      
+                      
+                        <strong>
+                          weights
+                        </strong>
+                        <div>
+                          <label for="weights"> Weight the contribution of the corresponding data points towards the count in each bin</label>
+                        </div>
+                        <div>
+                          <input id="weights" type="text" name="weights" placeholder="vector of key in data" value="default">
+                        </div>
+                        <br>
+
+                      
+                        <strong>
+                          stat
+                        </strong>
+                        <div>
+                          <label for="stat"> Aggregate statistic to compute in each bin</label>
+                        </div>
+                        <div>
+                            <select id="stat" name="stat">
+                            <option value='default'> default </option>
+                            <option value='"count"'> count </option>
+                            <option value='"frequency"'> frequency </option>
+                            <option value='"probability"'> probability/proportion </option>
+                            <option value='"percent"'> percent </option>
+                            <option value='"density"'> density </option>
+                          </select>
+                        </div>
+                        <br>
+
+                      
+                        <strong>
+                          bins
+                        </strong>
+                        <div>
+                          <label for="bins"> Generic bin parameter(the name of a reference rule, the number of bins, or the breaks of the bins.)</label>
+                        </div>
+                        <div>
+                          <input id="bins" type="text" name="bins" placeholder="str, number, vector, or a pair of such values" value="default">
+                        </div>
+                        <br>
+
+                      
+                        <strong>
+                          binwidth
+                        </strong>
+                        <div>
+                          <label for="binwidth">Width of each bin, overrides bins but can be used with binrange</label>
+                        </div>
+                        <div>
+                          <input id="binwidth" type="text" name="binwidth" placeholder="number or pair of numbers" value="default">
+                        </div>
+                        <br>
+
+                      
+                        <strong>
+                          binrange
+                        </strong>
+                        <div>
+                          <label for="binrange">Lowest and highest value of bin edges</label>
+                        </div>
+                        <div>
+                          <input id="binrange" type="text" name="binrange" placeholder="pair of numbers or a pair of pairs" value="default">
+                        </div>
+                        <br>
+
+                      
+                        <strong>
+                          discrete
+                        </strong>
+                        <div>
+                          <label for="discrete"> Whether the bars are centered on their corresponding data points</label>
+                        </div>
+                        <div>
+                            <select id="discrete" name="discrete">
+                            <option value="default"> default </option>
+                            <option value="True"> True </option>
+                            <option value="False"> False </option>
+                          </select>
+                        </div>
+                        <br>
+
+                      
+                        <strong>
+                          cumulative
+                        </strong>
+                        <div>
+                          <label for="cumulative"> Whether to plot the cumulative counts as bins increase</label>
+                        </div>
+                        <div>
+                            <select id="cumulative" name="cumulative">
+                            <option value="default"> default </option>
+                            <option value="True"> True </option>
+                            <option value="False"> False </option>
+                          </select>
+                        </div>
+                        <br>
+
+                      
+                        <strong>
+                          common_bins
+                        </strong>
+                        <div>
+                          <label for="common_bins"> Whether to use the same bins when semantic variables produce multiple plots</label>
+                        </div>
+                        <div>
+                            <select id="common_bins" name="common_bins">
+                            <option value="default"> default </option>
+                            <option value="True"> True </option>
+                            <option value="False"> False </option>
+                          </select>
+                        </div>
+                        <br>
+
+                      
+                        <strong>
+                          common_norm
+                        </strong>
+                        <div>
+                          <label for="common_norm"> Whether to normalize the full dataset</label>
+                        </div>
+                        <div>
+                            <select id="common_norm" name="common_norm">
+                            <option value="default"> default </option>
+                            <option value="True"> True </option>
+                            <option value="False"> False </option>
+                          </select>
+                        </div>
+                        <br>
+                      
+                      
+                        <strong>
+                          multiple
+                        </strong>
+                        <div>
+                          <label for="multiple"> If multiple elements to show, <a href="https://stackoverflow.com/questions/70649224/seaborn-how-to-use-multiple-parameter-in-seaborn-histplot">how to display</a></label>
+                        </div>
+                        <div>
+                            <select id="multiple" name="multiple">
+                            <option value="default"> default </option>
+                            <option value='"layer"'> layer </option>
+                            <option value='"dodge"'> dodge </option>
+                            <option value='"stack"'> stack </option>
+                            <option value='"fill"'> fill </option>
+                          </select>
+                        </div>
+                        <br>
+                      
+                      
+                        <strong>
+                          element
+                        </strong>
+                        <div>
+                          <label for="element"> Cisual representation of the histogram statistic</label>
+                        </div>
+                        <div>
+                            <select id="element" name="element">
+                            <option value="default"> default </option>
+                            <option value='"bars"'> bars </option>
+                            <option value='"step"'> step </option>
+                            <option value='"poly"'> poly </option>
+                          </select>
+                        </div>
+                        <br>
+                      
+                      
+                        <strong>
+                          fill
+                        </strong>
+                        <div>
+                          <label for="fill"> Whether to fill in the space under the histogram</label>
+                        </div>
+                        <div>
+                            <select id="fill" name="fill">
+                            <option value="default"> default </option>
+                            <option value="True"> True </option>
+                            <option value="False"> False </option>
+                          </select>
+                        </div>
+                        <br>
+
+                      
+                        <strong>
+                          shrink  
+                        </strong>
+                        <div>
+                          <label for="shrink">Scale the width of each bar relative to the binwidth</label>
+                        </div>
+                        <div>
+                          <input id="shrink" type="text" name="shrink" placeholder="number" value="default">
+                        </div>
+                        <br>
+                      
+                      
+                        <strong>
+                          kde
+                        </strong>
+                        <div>
+                          <label for="kde"> Whether to put a kernel density estimate and show on the plot</label>
+                        </div>
+                        <div>
+                            <select id="kde" name="kde">
+                            <option value="default"> default </option>
+                            <option value="True"> True </option>
+                            <option value="False"> False </option>
+                          </select>
+                        </div>
+                        <br>
+                      
+                      
+                        <strong>
+                          kde_kws
+                        </strong>
+                        <div>
+                          <label for="kde_kws">Parameters that control the KDE computation</label>
+                        </div>
+                        <div>
+                          <input id="kde_kws" type="text" name="kde_kws" placeholder="Enter a dict" value="default">
+                        </div>
+                        <br>
+                      
+                      
+                        <strong>
+                          line_kws
+                        </strong>
+                        <div>
+                          <label for="line_kws">Parameters that control the KDE visualization</label>
+                        </div>
+                        <div>
+                          <input id="line_kws" type="text" name="line_kws" placeholder="Enter a dict" value="default">
+                        </div>
+                        <br>
+                      
+                      
+                        <strong>
+                          thresh
+                        </strong>
+                        <div>
+                          <label for="thresh">Cells with a statistic less than or equal to this value will be transparent</label>
+                        </div>
+                        <div>
+                          <input id="thresh" type="text" name="thresh" placeholder="Enter number" value="default">
+                        </div>
+                        <br>
+                      
+                      
+                        <strong>
+                          pthresh
+                        </strong>
+                        <div>
+                          <label for="pthresh">Similar to thresh, but a value in [0,1] which examines proportion</label>
+                        </div>
+                        <div>
+                          <input id="pthresh" type="text" name="pthresh" placeholder="Enter number" value="default">
+                        </div>
+                        <br>
+                      
+                      
+                        <strong>
+                          pmax
+                        </strong>
+                        <div>
+                          <label for="pmax">A value in [0,1] that sets the saturation point for the colormap</label>
+                        </div>
+                        <div>
+                          <input id="pmax" type="text" name="pmax" placeholder="Enter number" value="default">
+                        </div>
+                        <br>
+
+                      
+                        <strong>
+                          cbar
+                        </strong>
+                        <div>
+                          <label for="cbar"> Whether to add a colorbar to annotate the color mapping in a bivariate plot.
+                          (May not support plots with a hue variable well now) </label>
+                        </div>
+                        <div>
+                            <select id="cbar" name="cbar">
+                            <option value="default"> default </option>
+                            <option value="True"> True </option>
+                            <option value="False"> False </option>
+                          </select>
+                        </div>
+                        <br>
+
+                      
+                        <strong>
+                          cbar_ax
+                        </strong>
+                        <div>
+                          <label for="cbar_ax">Pre-existing axes for the colorbar</label>
+                        </div>
+                        <div>
+                          <input id="cbar_ax" type="text" name="cbar_ax" placeholder="matplotlib.axes.Axes" value="default">
+                        </div>
+                        <br>
+                      
+                      
+                        <strong>
+                          cbar_kws
+                        </strong>
+                        <div>
+                          <label for="cbar_kws">Additional parameters passed to matplotlib.figure.Figure.colorbar()</label>
+                        </div>
+                        <div>
+                          <input id="cbar_kws" type="text" name="cbar_kws" placeholder="Enter a dict" value="default">
+                        </div>
+                        <br>
+                      
+                      
+                        <strong>
+                          palette
+                        </strong>
+                        <div>
+                          <label for="palette">Method for choosing the colors to use when mapping the hue semantic</label>
+                        </div>
+                        <div>
+                          <input id="palette" type="text" name="palette" placeholder="string, list, dict, ot matplotlib.colors.Colormap" value="default">
+                        </div>
+                        <br>
+                      
+                      
+                        <strong>
+                          hue_order
+                        </strong>
+                        <div>
+                          <label for="hue_order">Specify the order of processing and plotting for categorical levels of hue semantic</label>
+                        </div>
+                        <div>
+                          <input id="hue_order" type="text" name="hue_order" placeholder="vector of strings" value="default">
+                        </div>
+                        <br>
+                      
+                      
+                        <strong>
+                          hue_norm
+                        </strong>
+                        <div>
+                          <label for="hue_norm">Set the normalization range</label>
+                        </div>
+                        <div>
+                          <input id="hue_norm" type="text" name="hue_norm" placeholder="tuple or matplotlib.colors.Normalize" value="default">
+                        </div>
+                        <br>
+                      
+                      
+                        <strong>
+                          color
+                        </strong>
+                        <div>
+                          <label for="color">Single color specification for when hue mapping is not used</label>
+                        </div>
+                        <div>
+                          <input id="color" type="text" name="color" placeholder="matplotlib color" value="default">
+                        </div>
+                        <br>
+                      
+                      
+                        <strong>
+                          log_scale
+                        </strong>
+                        <div>
+                          <label for="log_scale">Set axis scale to log</label>
+                        </div>
+                        <div>
+                          <input id="log_scale" type="text" name="log_scale" placeholder="bool or number, or pair of bools or numbers" value="default">
+                        </div>
+                        <br>
+                      
+                      
+                        <strong>
+                          legend
+                        </strong>
+                        <div>
+                          <label for="legend">Will suppress the legend for semantic variables if False.</label>
+                        </div>
+                        <div>
+                            <select id="legend" name="legend">
+                            <option value="default"> default </option>
+                            <option value="True"> True </option>
+                            <option value="False"> False </option>
+                          </select>
+                        </div>
+                        <br>
+
+                      
+                        <strong>
+                          ax
+                        </strong>
+                        <div>
+                          <label for="ax">Pre-existing axes for the plot</label>
+                        </div>
+                        <div>
+                          <input id="ax" type="text" name="ax" placeholder="matplotlib.axes. Axes" value="default">
+                        </div>
+                        <br>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <br>
+              <div class="ctr">
+                <button class="btn btn-primary btn-lg">SUBMIT!</button>
+              </div>
+              <br>
+            </form>
+          <%end%>
+
+          <%if @the_type == "Line Chart"%>
+            <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+              <symbol id="check-circle-fill" fill="currentColor" viewBox="0 0 16 16">
+                <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"/>
+              </symbol>
+              <symbol id="info-fill" fill="currentColor" viewBox="0 0 16 16">
+                <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm.93-9.412-1 4.705c-.07.34.029.533.304.533.194 0 .487-.07.686-.246l-.088.416c-.287.346-.92.598-1.465.598-.703 0-1.002-.422-.808-1.319l.738-3.468c.064-.293.006-.399-.287-.47l-.451-.081.082-.381 2.29-.287zM8 5.5a1 1 0 1 1 0-2 1 1 0 0 1 0 2z"/>
+              </symbol>
+              <symbol id="exclamation-triangle-fill" fill="currentColor" viewBox="0 0 16 16">
+                <path d="M8.982 1.566a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566zM8 5c.535 0 .954.462.9.995l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 5.995A.905.905 0 0 1 8 5zm.002 6a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
+              </symbol>
+            </svg>
+
+            <div class="alert alert-primary d-flex align-items-center" role="alert">
+              <svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Info:"><use xlink:href="#info-fill"/></svg>
+              <div>
+                <a href="https://seaborn.pydata.org/generated/seaborn.lineplot.html" target="_blank">
+                  More Info on line plot Arguments...
+                </a>
+              </div>
+            </div>
+
+            <form action="/arguments/<%=@the_type%>" class="">
+              <div class="accordion" id="accordionExample">
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="headingOne">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                      <strong> Commonly used arguements </strong>
+                    </button>
+                  </h2>
+                  <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                      
+                        <strong>
+                          <label for="x"> Name of X Variable </label>
+                        </strong>
+                        <div>
+                          <input id="x" type="text" name="x" placeholder="Enter the name of X variable...">
+                        </div>
+                        <br>
+                      
+                        <strong>
+                          <label for="y"> Name of Y Variable </label>
+                        </strong>
+                        <div>
+                          <input id="y" type="text" name="y" placeholder="Enter the name of Y variable...">
+                        </div>
+                        <br>
+                      
+                        <strong>
+                          <label for="data"> Name of Dataset </label>
+                        </strong>
+                        <div>
+                          <input id="data" type="text" name="data" placeholder="Enter the name of dataset...">
+                        </div>
+                        <br>
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="headingTwo">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                      <strong> Recommended Optionals </strong>
+                    </button>
+                  </h2>
+                  <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                      
+                        <strong>
+                          <label for="set_title"> A title </label>
+                        </strong>
+                        <div>
+                          <input id="set_title" type="text" name="set_title" placeholder="The title name you want..." value="default">
+                        </div>
+                        <br>
+                      
+                        <strong>
+                          <label for="set_xlabel"> X axis label </label>
+                        </strong>
+                        <div>
+                          <input id="set_xlabel" type="text" name="set_xlabel" placeholder="The axis name you want..." value="default">
+                        </div>
+                        <br>
+                      
+                        <strong>
+                          <label for="set_ylabel"> Y axis label </label>
+                        </strong>
+                        <div>
+                          <input id="set_ylabel" type="text" name="set_ylabel" placeholder="The axis name you want..." value="default">
+                        </div>
+                        <br>
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="headingThree">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                      <strong> Advanced Optionals </strong>
+                    </button>
+                  </h2>
+                  <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                      
+                  <strong>
+                    hue
+                  </strong>
+                  <div>
+                    <label for="hue"> Name of the Vector Variable (e.g. "Smoker_dummy", "Male_dummy")</label>
+                  </div>
+                  <div>
+                    <input id="hue" type="text" name="hue" placeholder="Separates your X by a vector variable" value="default">
+                  </div>
+                  <br>
+                
+                
+                  <strong>
+                    size
+                  </strong>
+                  <div>
+                    <label for="size"> Grouping variable that produces lines with different widths</label>
+                  </div>
+                  <div>
+                    <input id="size" type="text" name="size" placeholder="vector or key in data" value="default">
+                  </div>
+                  <br>
+
+                
+                  <strong>
+                    style
+                  </strong>
+                  <div>
+                    <label for="style">Grouping variable that produces lines with different dashes and/or markers</label>
+                  </div>
+                  <div>
+                    <input id="style" type="text" name="style" placeholder="vector or key in data" value="default">
+                  </div>
+                  <br>
+
+                
+                  <strong>
+                    palette
+                  </strong>
+                  <div>
+                    <label for="palette">Colors to use for different levels of hue variable, details check color_palette()</label>
+                  </div>
+                  <div>
+                    <input id="palette" type="text" name="palette" placeholder="Enter color palette" value="default">
+                  </div>
+                  <br>
+
+                
+                  <strong>
+                    hue_order
+                  </strong>
+                  <div>
+                    <label for="hue_order"> Order of the Vector Variable Categories (enter a list of hue names, e.g. ["a","b","c"])</label>
+                  </div>
+                  <div>
+                    <input id="hue_order" type="text" name="hue_order" placeholder="Order to plot the categorical levels in" value="default">
+                  </div>
+                  <br>
+
+                
+                  <strong>
+                    hue_norm
+                  </strong>
+                  <div>
+                    <label for="hue_norm">Set the normalization range</label>
+                  </div>
+                  <div>
+                    <input id="hue_norm" type="text" name="hue_norm" placeholder="tuple or matplotlib.colors.Normalize" value="default">
+                  </div>
+                  <br>
+                
+                
+                  <strong>
+                    sizes
+                  </strong>
+                  <div>
+                    <label for="sizes">Object that determines how sizes are chosen</label>
+                  </div>
+                  <div>
+                    <input id="sizes" type="text" name="sizes" placeholder="list, dict, or tuple" value="default">
+                  </div>
+                  <br>
+                
+                
+                  <strong>
+                    size_order
+                  </strong>
+                  <div>
+                    <label for="size_order">Specified order for appearance of the size variable levels</label>
+                  </div>
+                  <div>
+                    <input id="size_order" type="text" name="size_order" placeholder="list" value="default">
+                  </div>
+                  <br>
+                
+                
+                  <strong>
+                    size_norm
+                  </strong>
+                  <div>
+                    <label for="size_norm">Normalization in data units for scaling plot objects when the size variable is numeric</label>
+                  </div>
+                  <div>
+                    <input id="size_norm" type="text" name="size_norm" placeholder="tuple or Normalize object" value="default">
+                  </div>
+                  <br>
+                
+                
+                  <strong>
+                    dashes
+                  </strong>
+                  <div>
+                    <label for="dashes">Object determining how to draw the lines for different levels of the style variable</label>
+                  </div>
+                  <div>
+                    <input id="dashes" type="text" name="dashes" placeholder="boolean, list, or dict" value="default">
+                  </div>
+                  <br>
+                
+                
+                  <strong>
+                    markers
+                  </strong>
+                  <div>
+                    <label for="markers">Object determining how to draw the markers for different levels of the style variable</label>
+                  </div>
+                  <div>
+                    <input id="markers" type="text" name="markers" placeholder="boolean, list, or dict" value="default">
+                  </div>
+                  <br>
+                
+                
+                  <strong>
+                    style_order
+                  </strong>
+                  <div>
+                    <label for="style_order">Specified order for appearance of the style variable levels</label>
+                  </div>
+                  <div>
+                    <input id="style_order" type="text" name="style_order" placeholder="list" value="default">
+                  </div>
+                  <br>
+
+                
+                  <strong>
+                    units             
+                  </strong>
+                  <div>
+                    <label for="units">Identifier of sampling units </label>
+                  </div>
+                  <div>
+                    <input id="units" type="text" name="units" placeholder="vector or key in data" value="default">
+                  </div>
+                  <br>
+
+                
+                  <strong>
+                    estimator
+                  </strong>
+                  <div>
+                    <label for="estimator">Method for aggregating across multiple observations of the y variable at the same x level</label>
+                  </div>
+                  <div>
+                    <input id="estimator" type="text" name="estimator" placeholder="Enter the function name" value="default">
+                  </div>
+                  <br>
+
+                
+                  <strong>
+                    ci
+                  </strong>
+                  <div>
+                    <label for="ci">Size of Confidence Interval (a float, or "sd", or None) </label>
+                  </div>
+                  <div>
+                    <input id="ci" type="text" name="ci" placeholder="int or 'sd' or None" value="default">
+                  </div>
+                  <br>
+                
+                
+                  <strong>
+                    n_boot
+                  </strong>
+                  <div>
+                    <label for="n_boot">Number of bootstrap iterations to use</label>
+                  </div>
+                  <div>
+                    <input id="n_boot" type="text" name="n_boot" placeholder="int" value="default">
+                  </div>
+                  <br>
+
+                
+                  <strong>
+                    seed
+                  </strong>
+                  <div>
+                    <label for="seed">Seed or random number generator for reproducible bootstrapping </label>
+                  </div>
+                  <div>
+                    <input id="seed" type="text" name="seed" placeholder="int, numpy.random.Generator, or numpy.random.RandomState" value="default">
+                  </div>
+                  <br>
+
+
+                
+                  <strong>
+                    sort
+                  </strong>
+                  <div>
+                    <label for="sort">Whether to sort data by the x and y variables</label>
+                  </div>
+                  <div>
+                      <select id="sort" name="sort">
+                      <option value="default"> default </option>
+                      <option value="True"> True </option>
+                      <option value="False"> False </option>
+                    </select>
+                  </div>
+                  <br>
+
+                
+                  <strong>
+                    err_style
+                  </strong>
+                  <div>
+                    <label for="err_style">Whether to draw the confidence intervals with translucent error bands or discrete error bars</label>
+                  </div>
+                  <div>
+                    <input id="err_style" type="text" name="err_style" placeholder="'band' or 'bars'" value="default">
+                  </div>
+                  <br>
+
+                
+                  <strong>
+                    err_kws
+                  </strong>
+                  <div>
+                    <label for="err_kws">Additional parameters to control the aesthetics of the error bars.</label>
+                  </div>
+                  <div>
+                    <input id="err_kws" type="text" name="err_kws" placeholder="dict of keyword arguments" value="default">
+                  </div>
+                  <br>
+
+                
+                  <strong>
+                    legend
+                  </strong>
+                  <div>
+                    <label for="legend">How to draw the legend</label>
+                  </div>
+                  <div>
+                      <select id="legend" name="legend">
+                      <option value="default"> default </option>
+                      <option value='"auto"'> auto </option>
+                      <option value='"brief"'> brief </option>
+                      <option value='"full"'> full </option>
+                      <option value="False"> False </option>
+                    </select>
+                  </div>
+                  <br>
+
+                
+                  <strong>
+                    ax
+                  </strong>
+                  <div>
+                    <label for="ax">Axes object to draw the plot onto</label>
+                  </div>
+                  <div>
+                    <input id="ax" type="text" name="ax" placeholder="matplotlib axes" value="default">
+                  </div>
+                  <br>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <br>
+              <div class="ctr">
+                <button class="btn btn-primary btn-lg">SUBMIT!</button>
+              </div>
+              <br>
+            </form>
+          <%end%>
+
+          <%if @the_type == "Scatter Plot"%>
+            <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
+              <symbol id="check-circle-fill" fill="currentColor" viewBox="0 0 16 16">
+                <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"/>
+              </symbol>
+              <symbol id="info-fill" fill="currentColor" viewBox="0 0 16 16">
+                <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm.93-9.412-1 4.705c-.07.34.029.533.304.533.194 0 .487-.07.686-.246l-.088.416c-.287.346-.92.598-1.465.598-.703 0-1.002-.422-.808-1.319l.738-3.468c.064-.293.006-.399-.287-.47l-.451-.081.082-.381 2.29-.287zM8 5.5a1 1 0 1 1 0-2 1 1 0 0 1 0 2z"/>
+              </symbol>
+              <symbol id="exclamation-triangle-fill" fill="currentColor" viewBox="0 0 16 16">
+                <path d="M8.982 1.566a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566zM8 5c.535 0 .954.462.9.995l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 5.995A.905.905 0 0 1 8 5zm.002 6a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
+              </symbol>
+            </svg>
+
+            <div class="alert alert-primary d-flex align-items-center" role="alert">
+              <svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Info:"><use xlink:href="#info-fill"/></svg>
+              <div>
+                <a href="https://seaborn.pydata.org/generated/seaborn.scatterplot.html" target="_blank">
+                    More Info on scatter plot Arguments...
+                </a>
+              </div>
+            </div>
+            
+            <form action="/arguments/<%=@the_type%>" class="">
+              <div class="accordion" id="accordionExample">
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="headingOne">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                      <strong> Commonly used arguements </strong>
+                    </button>
+                  </h2>
+                  <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                      <div>
+                        <strong><label for="x"> Name of X Variable </label></strong>
+                      </div>
                       <div>
                         <input id="x" type="text" name="x" placeholder="Enter the name of X variable...">
                       </div>
-                       <br>
+                      <br>
                     
-                      <strong>
-                        <label for="y"> Name of Y Variable </label>
-                      </strong>
+                      <div>
+                        <strong><label for="y"> Name of Y Variable </label></strong>
+                      </div>
                       <div>
                         <input id="y" type="text" name="y" placeholder="Enter the name of Y variable...">
                       </div>
-                       <br>
+                      <br>
                     
-                      <strong>
-                        <label for="data"> Name of Dataset </label>
-                      </strong>
+                      <div>
+                        <strong><label for="data"> Name of Dataset </label></strong>
+                      </div>
                       <div>
                         <input id="data" type="text" name="data" placeholder="Enter the name of dataset...">
                       </div>
-                       <br>
+                      <br>
+                    </div>
                   </div>
                 </div>
-              </div>
-              <div class="accordion-item">
-                <h2 class="accordion-header" id="headingTwo">
-                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                    <strong> Recommended Optionals </strong>
-                  </button>
-                </h2>
-                <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
-                  <div class="accordion-body">
-                    
-                      <strong>
-                        <label for="set_title"> A title </label>
-                      </strong>
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="headingTwo">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                      <strong> Recommended Optionals </strong>
+                    </button>
+                  </h2>
+                  <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                      <div>
+                        <strong><label for="set_title"> A title </label></strong>
+                      </div>
                       <div>
                         <input id="set_title" type="text" name="set_title" placeholder="The title name you want..." value="default">
                       </div>
-                       <br>
+                      <br>
                     
-                      <strong>
-                        <label for="set_xlabel"> X axis label </label>
-                      </strong>
+                      <div>
+                        <strong><label for="set_xlabel"> X axis label </label></strong>
+                      </div>
                       <div>
                         <input id="set_xlabel" type="text" name="set_xlabel" placeholder="The axis name you want..." value="default">
                       </div>
-                       <br>
+                      <br>
                     
-                      <strong>
-                        <label for="set_ylabel"> Y axis label </label>
-                      </strong>
+                      <div>
+                        <strong><label for="set_ylabel"> Y axis label </label></strong>
+                      </div>
                       <div>
                         <input id="set_ylabel" type="text" name="set_ylabel" placeholder="The axis name you want..." value="default">
                       </div>
-                       <br>
+                    </div>
                   </div>
                 </div>
-              </div>
-              <div class="accordion-item">
-                <h2 class="accordion-header" id="headingThree">
-                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                    <strong> Advanced Optionals </strong>
-                  </button>
-                </h2>
-                <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
-                  <div class="accordion-body">
-                    
-                      <strong>
+                <div class="accordion-item">
+                  <h2 class="accordion-header" id="headingThree">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                      <strong> Advanced Optionals </strong>
+                    </button>
+                  </h2>
+                  <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                    <div class="accordion-body">
+                      <div><strong>
                         hue
-                      </strong>
+                      </strong></div>
                       <div>
                         <label for="hue"> Name of the Vector Variable (e.g. "Smoker_dummy", "Male_dummy")</label>
                       </div>
                       <div>
                         <input id="hue" type="text" name="hue" placeholder="Separates your X by a vector variable" value="default">
                       </div>
-                       <br>
+                      <br>
+                    
+                    
+                      <div><strong>
+                        size
+                      </strong></div>
+                      <div>
+                        <label for="size"> Grouping variable that produces lines with different widths</label>
+                      </div>
+                      <div>
+                        <input id="size" type="text" name="size" placeholder="vector or key in data" value="default">
+                      </div>
+                      <br>
 
                     
-                      <strong>
-                        order
-                      </strong>
+                      <div><strong>
+                        style
+                      </strong></div>
                       <div>
-                        <label for="order"> Order to plot the categorical levels in (ascending/descending)</label>
+                        <label for="style">Grouping variable that produces lines with different dashes and/or markers</label>
                       </div>
                       <div>
-                          <select id="order" name="order">
-                          <option value="default"> default </option>
-                          <option value='"ascending"'> Ascending </option>
-                          <option value='"descending"'> Descending </option>
-                        </select>
+                        <input id="style" type="text" name="style" placeholder="vector or key in data" value="default">
                       </div>
-                       <br>
+                      <br>
 
                     
-                      <strong>
-                        hue_order
-                      </strong>
-                      <div>
-                        <label for="hue_order"> Order of the Vector Variable Categories (enter a list of hue names, e.g. ["a","b","c"])</label>
-                      </div>
-                      <div>
-                        <input id="hue_order" type="text" name="hue_order" placeholder="Order to plot the categorical levels in" value="default">
-                      </div>
-                       <br>
-
-                    
-                      <strong>
-                        estimator
-                      </strong>
-                      <div>
-                        <label for="estimator">Statistical function to estimate within each categorical bin (e.g. mean, np.mean) </label>
-                      </div>
-                      <div>
-                        <input id="estimator" type="text" name="estimator" placeholder="Enter the function name" value="default">
-                      </div>
-                       <br>
-
-                    
-                      <strong>
-                        ci
-                      </strong>
-                      <div>
-                        <label for="ci">Size of Confidence Interval (a float, or "sd", or None) </label>
-                      </div>
-                      <div>
-                        <input id="ci" type="text" name="ci" placeholder="Enter the Confidence Interval" value="default">
-                      </div>
-                       <br>
-
-                    
-                      <strong>
-                        n_boot
-                      </strong>
-                      <div>
-                        <label for="n_boot">Number of bootstrap iterations to use (int) </label>
-                      </div>
-                      <div>
-                        <input id="n_boot" type="text" name="n_boot" placeholder="Number of bootstrap iterations" value="default">
-                      </div>
-                       <br>
-
-                    
-                      <strong>
-                        units             
-                      </strong>
-                      <div>
-                        <label for="units">Identifier of sampling units </label>
-                      </div>
-                      <div>
-                        <input id="units" type="text" name="units" placeholder="Name of variale in data or vector data" value="default">
-                      </div>
-                       <br>
-
-                    
-                      <strong>
-                        seed
-                      </strong>
-                      <div>
-                        <label for="seed">Seed (int, numpy.random.Generator, or numpy.random.RandomState, etc.) </label>
-                      </div>
-                      <div>
-                        <input id="seed" type="text" name="seed" placeholder="Seed or random number generator for reproducible bootstrapping" value="default">
-                      </div>
-                       <br>
-
-                    
-                      <strong>
-                        orient
-                      </strong>
-                      <div>
-                        <label for="orient"> Vertical or horizontal</label>
-                      </div>
-                      <div>
-                          <select id="orient" name="orient">
-                          <option value="default"> default </option>
-                          <option value='"v"'> vertical </option>
-                          <option value='"h"'> horizontal </option>
-                        </select>
-                      </div>
-                       <br>
-
-                    
-                      <strong>
-                        color
-                      </strong>
-                      <div>
-                        <label for="color">Color for all elements</label>
-                      </div>
-                      <div>
-                        <input id="color" type="text" name="color" placeholder="Enter color" value="default">
-                      </div>
-                       <br>
-
-                    
-                      <strong>
+                      <div><strong>
                         palette
-                      </strong>
+                      </strong></div>
                       <div>
                         <label for="palette">Colors to use for different levels of hue variable, details check color_palette()</label>
                       </div>
                       <div>
                         <input id="palette" type="text" name="palette" placeholder="Enter color palette" value="default">
                       </div>
-                       <br>
+                      <br>
 
                     
-                      <strong>
-                        saturation  
-                      </strong>
-                      <div>
-                        <label for="saturation">Proportion of the original saturation to draw colors at</label>
-                      </div>
-                      <div>
-                        <input id="saturation" type="text" name="saturation" placeholder="Enter float" value="default">
-                      </div>
-                       <br>
-                    
-                    
-                      <strong>
-                        errcolor  
-                      </strong>
-                      <div>
-                        <label for="errcolor">Color for the lines that represent the confidence interval</label>
-                      </div>
-                      <div>
-                        <input id="errcolor" type="text" name="errcolor" placeholder="Enter errcolor" value="default">
-                      </div>
-                       <br>
-                    
-                    
-                      <strong>
-                        errwidth
-                      </strong>
-                      <div>
-                        <label for="errwidth">Thickness of error bar lines (and caps)</label>
-                      </div>
-                      <div>
-                        <input id="errwidth" type="text" name="errwidth" placeholder="Enter float" value="default">
-                      </div>
-                       <br>
-                    
-                    
-                      <strong>
-                        capsize
-                      </strong>
-                      <div>
-                        <label for="capsize">Width of the caps on error bars</label>
-                      </div>
-                      <div>
-                        <input id="capsize" type="text" name="capsize" placeholder="Enter float" value="default">
-                      </div>
-                       <br>
-                    
-                    
-                      <strong>
-                        dodge
-                      </strong>
-                      <div>
-                        <label for="dodge">Whether elements should be shifted along the categorical axis</label>
-                      </div>
-                      <div>
-                          <select id="dodge" name="dodge">
-                          <option value="default"> default </option>
-                          <option value="True"> True </option>
-                          <option value="False"> False </option>
-                        </select>
-                      </div>
-                       <br>
-                    
-                    
-                      <strong>
-                        ax
-                      </strong>
-                      <div>
-                        <label for="ax">Axes object to draw the plot onto</label>
-                      </div>
-                      <div>
-                        <input id="ax" type="text" name="ax" placeholder="matplotlib axes" value="default">
-                      </div>
-                       <br>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <br>
-            <div class="ctr">
-              <button class="btn btn-primary btn-sm">SUBMIT!</button>
-            </div>
-            <br>
-          </form>
-        <%end%>
-
-
-
-        <%if @the_type == "Box Plot"%>
-          <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
-            <symbol id="check-circle-fill" fill="currentColor" viewBox="0 0 16 16">
-              <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"/>
-            </symbol>
-            <symbol id="info-fill" fill="currentColor" viewBox="0 0 16 16">
-              <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm.93-9.412-1 4.705c-.07.34.029.533.304.533.194 0 .487-.07.686-.246l-.088.416c-.287.346-.92.598-1.465.598-.703 0-1.002-.422-.808-1.319l.738-3.468c.064-.293.006-.399-.287-.47l-.451-.081.082-.381 2.29-.287zM8 5.5a1 1 0 1 1 0-2 1 1 0 0 1 0 2z"/>
-            </symbol>
-            <symbol id="exclamation-triangle-fill" fill="currentColor" viewBox="0 0 16 16">
-              <path d="M8.982 1.566a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566zM8 5c.535 0 .954.462.9.995l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 5.995A.905.905 0 0 1 8 5zm.002 6a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
-            </symbol>
-          </svg>
-
-          <div class="alert alert-primary d-flex align-items-center" role="alert">
-            <svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Info:"><use xlink:href="#info-fill"/></svg>
-            <div>
-              <a href="https://seaborn.pydata.org/generated/seaborn.boxplot.html" target="_blank">
-                  More Info on box plot Arguments...
-              </a>
-            </div>
-          </div>
-          <form action="/arguments/<%=@the_type%>" class="">
-            <div class="accordion" id="accordionExample">
-              <div class="accordion-item">
-                <h2 class="accordion-header" id="headingOne">
-                  <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                    <strong> Commonly used arguements </strong>
-                  </button>
-                </h2>
-                <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
-                  <div class="accordion-body">
-                    
-                      <strong>
-                        <label for="x"> Name of X Variable </label>
-                      </strong>
-                      <div>
-                        <input id="x" type="text" name="x" placeholder="Enter the name of X variable...">
-                      </div>
-                       <br>
-                    
-                      <strong>
-                        <label for="y"> Name of Y Variable </label>
-                      </strong>
-                      <div>
-                        <input id="y" type="text" name="y" placeholder="Enter the name of Y variable...">
-                      </div>
-                       <br>
-                    
-                      <strong>
-                        <label for="data"> Name of Dataset </label>
-                      </strong>
-                      <div>
-                        <input id="data" type="text" name="data" placeholder="Enter the name of dataset...">
-                      </div>
-                       <br>
-                  </div>
-                </div>
-              </div>
-              <div class="accordion-item">
-                <h2 class="accordion-header" id="headingTwo">
-                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                    <strong> Recommended Optionals </strong>
-                  </button>
-                </h2>
-                <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
-                  <div class="accordion-body">
-                    
-                      <strong>
-                        <label for="set_title"> A title </label>
-                      </strong>
-                      <div>
-                        <input id="set_title" type="text" name="set_title" placeholder="The title name you want..." value="default">
-                      </div>
-                       <br>
-                    
-                      <strong>
-                        <label for="set_xlabel"> X axis label </label>
-                      </strong>
-                      <div>
-                        <input id="set_xlabel" type="text" name="set_xlabel" placeholder="The axis name you want..." value="default">
-                      </div>
-                       <br>
-                    
-                      <strong>
-                        <label for="set_ylabel"> Y axis label </label>
-                      </strong>
-                      <div>
-                        <input id="set_ylabel" type="text" name="set_ylabel" placeholder="The axis name you want..." value="default">
-                      </div>
-                       <br>
-                  </div>
-                </div>
-              </div>
-              <div class="accordion-item">
-                <h2 class="accordion-header" id="headingThree">
-                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                    <strong> Advanced Optionals </strong>
-                  </button>
-                </h2>
-                <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
-                  <div class="accordion-body">
-                    
-                      <strong>
-                        hue
-                      </strong>
-                      <div>
-                        <label for="hue"> Name of the Vector Variable (e.g. "Smoker_dummy", "Male_dummy")</label>
-                      </div>
-                      <div>
-                        <input id="hue" type="text" name="hue" placeholder="Separates your X by a vector variable" value="default">
-                      </div>
-                       <br>
-
-                    
-                      <strong>
-                        order
-                      </strong>
-                      <div>
-                        <label for="order"> Order to plot the categorical levels in (ascending/descending)</label>
-                      </div>
-                      <div>
-                          <select id="order" name="order">
-                          <option value="default"> default </option>
-                          <option value='"ascending"'> Ascending </option>
-                          <option value='"descending"'> Descending </option>
-                        </select>
-                      </div>
-                       <br>
-
-                    
-                      <strong>
+                      <div><strong>
                         hue_order
-                      </strong>
+                      </strong></div>
                       <div>
                         <label for="hue_order"> Order of the Vector Variable Categories (enter a list of hue names, e.g. ["a","b","c"])</label>
                       </div>
                       <div>
                         <input id="hue_order" type="text" name="hue_order" placeholder="Order to plot the categorical levels in" value="default">
                       </div>
-                       <br>
-        
-                    
-                      <strong>
-                        orient
-                      </strong>
-                      <div>
-                        <label for="orient"> Vertical or horizontal</label>
-                      </div>
-                      <div>
-                          <select id="orient" name="orient">
-                          <option value="default"> default </option>
-                          <option value='"v"'> vertical </option>
-                          <option value='"h"'> horizontal </option>
-                        </select>
-                      </div>
-                       <br>
+                      <br>
 
                     
-                      <strong>
-                        color
-                      </strong>
-                      <div>
-                        <label for="color">Color for all elements</label>
-                      </div>
-                      <div>
-                        <input id="color" type="text" name="color" placeholder="Enter color" value="default">
-                      </div>
-                       <br>
-
-                    
-                      <strong>
-                        palette
-                      </strong>
-                      <div>
-                        <label for="palette">Colors to use for different levels of hue variable, details check color_palette()</label>
-                      </div>
-                      <div>
-                        <input id="palette" type="text" name="palette" placeholder="Enter color palette" value="default">
-                      </div>
-                       <br>
-
-                    
-                      <strong>
-                        saturation  
-                      </strong>
-                      <div>
-                        <label for="saturation">Proportion of the original saturation to draw colors at</label>
-                      </div>
-                      <div>
-                        <input id="saturation" type="text" name="saturation" placeholder="Enter float" value="default">
-                      </div>
-                       <br>
-                    
-                    
-                      <strong>
-                        width
-                      </strong>
-                      <div>
-                        <label for="width">Width of a full element when not using hue nesting</label>
-                      </div>
-                      <div>
-                        <input id="width" type="text" name="width" placeholder="Enter float" value="default">
-                      </div>
-                       <br>
-
-                    
-                      <strong>
-                        dodge
-                      </strong>
-                      <div>
-                        <label for="dodge">Whether elements should be shifted along the categorical axis</label>
-                      </div>
-                      <div>
-                          <select id="dodge" name="dodge">
-                          <option value="default"> default </option>
-                          <option value="True"> True </option>
-                          <option value="False"> False </option>
-                        </select>
-                      </div>
-                       <br>
-
-                    
-                      <strong>
-                        fliersize
-                      </strong>
-                      <div>
-                        <label for="fliersize">Size of the markers used to indicate outlier observations</label>
-                      </div>
-                      <div>
-                        <input id="fliersize" type="text" name="fliersize" placeholder="Enter float" value="default">
-                      </div>
-                       <br>
-                    
-                    
-                      <strong>
-                        linewidth
-                      </strong>
-                      <div>
-                        <label for="linewidth">Width of the gray lines that frame the plot elements</label>
-                      </div>
-                      <div>
-                        <input id="linewidth" type="text" name="linewidth" placeholder="Enter float" value="default">
-                      </div>
-                       <br>
-                    
-                    
-                      <strong>
-                        whis
-                      </strong>
-                      <div>
-                        <label for="whis">Proportion of the IQR past the low and high quartiles to extend the plot whiskers</label>
-                      </div>
-                      <div>
-                        <input id="whis" type="text" name="whis" placeholder="Enter float" value="default">
-                      </div>
-                       <br>
-                    
-                    
-                      <strong>
-                        ax
-                      </strong>
-                      <div>
-                        <label for="ax">Axes object to draw the plot onto</label>
-                      </div>
-                      <div>
-                        <input id="ax" type="text" name="ax" placeholder="matplotlib axes" value="default">
-                      </div>
-                       <br>
-                </div>
-              </div>
-            </div>
-            <br>
-            <div class="ctr">
-              <button class="btn btn-primary btn-sm">SUBMIT!</button>
-            </div>
-            <br>
-          </form>
-        <%end%>
-
-        <%if @the_type == "Histogram"%>
-          <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
-            <symbol id="check-circle-fill" fill="currentColor" viewBox="0 0 16 16">
-              <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"/>
-            </symbol>
-            <symbol id="info-fill" fill="currentColor" viewBox="0 0 16 16">
-              <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm.93-9.412-1 4.705c-.07.34.029.533.304.533.194 0 .487-.07.686-.246l-.088.416c-.287.346-.92.598-1.465.598-.703 0-1.002-.422-.808-1.319l.738-3.468c.064-.293.006-.399-.287-.47l-.451-.081.082-.381 2.29-.287zM8 5.5a1 1 0 1 1 0-2 1 1 0 0 1 0 2z"/>
-            </symbol>
-            <symbol id="exclamation-triangle-fill" fill="currentColor" viewBox="0 0 16 16">
-              <path d="M8.982 1.566a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566zM8 5c.535 0 .954.462.9.995l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 5.995A.905.905 0 0 1 8 5zm.002 6a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
-            </symbol>
-          </svg>
-
-          <div class="alert alert-primary d-flex align-items-center" role="alert">
-            <svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Info:"><use xlink:href="#info-fill"/></svg>
-            <div>
-              <a href="https://seaborn.pydata.org/generated/seaborn.histplot.html" target="_blank">
-                More Info on histogram Arguments...
-              </a>
-            </div>
-          </div>
-
-          <form action="/arguments/<%=@the_type%>" class="">
-            <div class="accordion" id="accordionExample">
-              <div class="accordion-item">
-                <h2 class="accordion-header" id="headingOne">
-                  <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                    <strong> Commonly used arguements </strong>
-                  </button>
-                </h2>
-                <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
-                  <div class="accordion-body">
-                    
-                      <strong>
-                        Name of data
-                      </strong>
-                      <div>
-                        <label for="data"> Input data structure: Either a long-form collection of vectors or a wide-form dataset. </label>
-                      </div>
-                      <div>
-                        <input id="data" type="text" name="data" placeholder="Enter the name of data...">
-                      </div>
-                       <br>
-                  </div>
-                </div>
-              </div>
-              <div class="accordion-item">
-                <h2 class="accordion-header" id="headingTwo">
-                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                    <strong> Recommended Optionals </strong>
-                  </button>
-                </h2>
-                <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
-                  <div class="accordion-body">
-                    
-                      <strong>
-                        <label for="set_title"> A title </label>
-                      </strong>
-                      <div>
-                        <input id="set_title" type="text" name="set_title" placeholder="The title name you want..." value="default">
-                      </div>
-                       <br>
-                    
-                      <strong>
-                        <label for="x"> X axis specification </label>
-                      </strong>
-                      <div>
-                        <input id="x" type="text" name="x" placeholder="vector or keys in data" value="default">
-                      </div>
-                       <br>
-                    
-                      <strong>
-                        <label for="y"> Y axis specification </label>
-                      </strong>
-                      <div>
-                        <input id="y" type="text" name="y" placeholder="vector or keys in data" value="default">
-                      </div>
-                       <br>
-                  </div>
-                </div>
-              </div>
-              <div class="accordion-item">
-                <h2 class="accordion-header" id="headingThree">
-                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                    <strong> Advanced Optionals </strong>
-                  </button>
-                </h2>
-                <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
-                  <div class="accordion-body">
-                    
-                      <strong>
-                        hue
-                      </strong>
-                      <div>
-                        <label for="hue"> Name of the Vector Variable (e.g. "Smoker_dummy", "Male_dummy")</label>
-                      </div>
-                      <div>
-                        <input id="hue" type="text" name="hue" placeholder="vector of keys in data" value="default">
-                      </div>
-                       <br>
-                    
-                    
-                      <strong>
-                        weights
-                      </strong>
-                      <div>
-                        <label for="weights"> Weight the contribution of the corresponding data points towards the count in each bin</label>
-                      </div>
-                      <div>
-                        <input id="weights" type="text" name="weights" placeholder="vector of key in data" value="default">
-                      </div>
-                       <br>
-
-                    
-                      <strong>
-                        stat
-                      </strong>
-                      <div>
-                        <label for="stat"> Aggregate statistic to compute in each bin</label>
-                      </div>
-                      <div>
-                          <select id="stat" name="stat">
-                          <option value='default'> default </option>
-                          <option value='"count"'> count </option>
-                          <option value='"frequency"'> frequency </option>
-                          <option value='"probability"'> probability/proportion </option>
-                          <option value='"percent"'> percent </option>
-                          <option value='"density"'> density </option>
-                        </select>
-                      </div>
-                       <br>
-
-                    
-                      <strong>
-                        bins
-                      </strong>
-                      <div>
-                        <label for="bins"> Generic bin parameter(the name of a reference rule, the number of bins, or the breaks of the bins.)</label>
-                      </div>
-                      <div>
-                        <input id="bins" type="text" name="bins" placeholder="str, number, vector, or a pair of such values" value="default">
-                      </div>
-                       <br>
-
-                    
-                      <strong>
-                        binwidth
-                      </strong>
-                      <div>
-                        <label for="binwidth">Width of each bin, overrides bins but can be used with binrange</label>
-                      </div>
-                      <div>
-                        <input id="binwidth" type="text" name="binwidth" placeholder="number or pair of numbers" value="default">
-                      </div>
-                       <br>
-
-                    
-                      <strong>
-                        binrange
-                      </strong>
-                      <div>
-                        <label for="binrange">Lowest and highest value of bin edges</label>
-                      </div>
-                      <div>
-                        <input id="binrange" type="text" name="binrange" placeholder="pair of numbers or a pair of pairs" value="default">
-                      </div>
-                       <br>
-
-                    
-                      <strong>
-                        discrete
-                      </strong>
-                      <div>
-                        <label for="discrete"> Whether the bars are centered on their corresponding data points</label>
-                      </div>
-                      <div>
-                          <select id="discrete" name="discrete">
-                          <option value="default"> default </option>
-                          <option value="True"> True </option>
-                          <option value="False"> False </option>
-                        </select>
-                      </div>
-                       <br>
-
-                    
-                      <strong>
-                        cumulative
-                      </strong>
-                      <div>
-                        <label for="cumulative"> Whether to plot the cumulative counts as bins increase</label>
-                      </div>
-                      <div>
-                          <select id="cumulative" name="cumulative">
-                          <option value="default"> default </option>
-                          <option value="True"> True </option>
-                          <option value="False"> False </option>
-                        </select>
-                      </div>
-                       <br>
-
-                    
-                      <strong>
-                        common_bins
-                      </strong>
-                      <div>
-                        <label for="common_bins"> Whether to use the same bins when semantic variables produce multiple plots</label>
-                      </div>
-                      <div>
-                          <select id="common_bins" name="common_bins">
-                          <option value="default"> default </option>
-                          <option value="True"> True </option>
-                          <option value="False"> False </option>
-                        </select>
-                      </div>
-                       <br>
-
-                    
-                      <strong>
-                        common_norm
-                      </strong>
-                      <div>
-                        <label for="common_norm"> Whether to normalize the full dataset</label>
-                      </div>
-                      <div>
-                          <select id="common_norm" name="common_norm">
-                          <option value="default"> default </option>
-                          <option value="True"> True </option>
-                          <option value="False"> False </option>
-                        </select>
-                      </div>
-                       <br>
-                    
-                    
-                      <strong>
-                        multiple
-                      </strong>
-                      <div>
-                        <label for="multiple"> If multiple elements to show, <a href="https://stackoverflow.com/questions/70649224/seaborn-how-to-use-multiple-parameter-in-seaborn-histplot">how to display</a></label>
-                      </div>
-                      <div>
-                          <select id="multiple" name="multiple">
-                          <option value="default"> default </option>
-                          <option value='"layer"'> layer </option>
-                          <option value='"dodge"'> dodge </option>
-                          <option value='"stack"'> stack </option>
-                          <option value='"fill"'> fill </option>
-                        </select>
-                      </div>
-                       <br>
-                    
-                    
-                      <strong>
-                        element
-                      </strong>
-                      <div>
-                        <label for="element"> Cisual representation of the histogram statistic</label>
-                      </div>
-                      <div>
-                          <select id="element" name="element">
-                          <option value="default"> default </option>
-                          <option value='"bars"'> bars </option>
-                          <option value='"step"'> step </option>
-                          <option value='"poly"'> poly </option>
-                        </select>
-                      </div>
-                       <br>
-                    
-                    
-                      <strong>
-                        fill
-                      </strong>
-                      <div>
-                        <label for="fill"> Whether to fill in the space under the histogram</label>
-                      </div>
-                      <div>
-                          <select id="fill" name="fill">
-                          <option value="default"> default </option>
-                          <option value="True"> True </option>
-                          <option value="False"> False </option>
-                        </select>
-                      </div>
-                       <br>
-
-                    
-                      <strong>
-                        shrink  
-                      </strong>
-                      <div>
-                        <label for="shrink">Scale the width of each bar relative to the binwidth</label>
-                      </div>
-                      <div>
-                        <input id="shrink" type="text" name="shrink" placeholder="number" value="default">
-                      </div>
-                       <br>
-                    
-                    
-                      <strong>
-                        kde
-                      </strong>
-                      <div>
-                        <label for="kde"> Whether to put a kernel density estimate and show on the plot</label>
-                      </div>
-                      <div>
-                          <select id="kde" name="kde">
-                          <option value="default"> default </option>
-                          <option value="True"> True </option>
-                          <option value="False"> False </option>
-                        </select>
-                      </div>
-                       <br>
-                    
-                    
-                      <strong>
-                        kde_kws
-                      </strong>
-                      <div>
-                        <label for="kde_kws">Parameters that control the KDE computation</label>
-                      </div>
-                      <div>
-                        <input id="kde_kws" type="text" name="kde_kws" placeholder="Enter a dict" value="default">
-                      </div>
-                       <br>
-                    
-                    
-                      <strong>
-                        line_kws
-                      </strong>
-                      <div>
-                        <label for="line_kws">Parameters that control the KDE visualization</label>
-                      </div>
-                      <div>
-                        <input id="line_kws" type="text" name="line_kws" placeholder="Enter a dict" value="default">
-                      </div>
-                       <br>
-                    
-                    
-                      <strong>
-                        thresh
-                      </strong>
-                      <div>
-                        <label for="thresh">Cells with a statistic less than or equal to this value will be transparent</label>
-                      </div>
-                      <div>
-                        <input id="thresh" type="text" name="thresh" placeholder="Enter number" value="default">
-                      </div>
-                       <br>
-                    
-                    
-                      <strong>
-                        pthresh
-                      </strong>
-                      <div>
-                        <label for="pthresh">Similar to thresh, but a value in [0,1] which examines proportion</label>
-                      </div>
-                      <div>
-                        <input id="pthresh" type="text" name="pthresh" placeholder="Enter number" value="default">
-                      </div>
-                       <br>
-                    
-                    
-                      <strong>
-                        pmax
-                      </strong>
-                      <div>
-                        <label for="pmax">A value in [0,1] that sets the saturation point for the colormap</label>
-                      </div>
-                      <div>
-                        <input id="pmax" type="text" name="pmax" placeholder="Enter number" value="default">
-                      </div>
-                       <br>
-
-                    
-                      <strong>
-                        cbar
-                      </strong>
-                      <div>
-                        <label for="cbar"> Whether to add a colorbar to annotate the color mapping in a bivariate plot.
-                        (May not support plots with a hue variable well now) </label>
-                      </div>
-                      <div>
-                          <select id="cbar" name="cbar">
-                          <option value="default"> default </option>
-                          <option value="True"> True </option>
-                          <option value="False"> False </option>
-                        </select>
-                      </div>
-                       <br>
-
-                    
-                      <strong>
-                        cbar_ax
-                      </strong>
-                      <div>
-                        <label for="cbar_ax">Pre-existing axes for the colorbar</label>
-                      </div>
-                      <div>
-                        <input id="cbar_ax" type="text" name="cbar_ax" placeholder="matplotlib.axes.Axes" value="default">
-                      </div>
-                       <br>
-                    
-                    
-                      <strong>
-                        cbar_kws
-                      </strong>
-                      <div>
-                        <label for="cbar_kws">Additional parameters passed to matplotlib.figure.Figure.colorbar()</label>
-                      </div>
-                      <div>
-                        <input id="cbar_kws" type="text" name="cbar_kws" placeholder="Enter a dict" value="default">
-                      </div>
-                       <br>
-                    
-                    
-                      <strong>
-                        palette
-                      </strong>
-                      <div>
-                        <label for="palette">Method for choosing the colors to use when mapping the hue semantic</label>
-                      </div>
-                      <div>
-                        <input id="palette" type="text" name="palette" placeholder="string, list, dict, ot matplotlib.colors.Colormap" value="default">
-                      </div>
-                       <br>
-                    
-                    
-                      <strong>
-                        hue_order
-                      </strong>
-                      <div>
-                        <label for="hue_order">Specify the order of processing and plotting for categorical levels of hue semantic</label>
-                      </div>
-                      <div>
-                        <input id="hue_order" type="text" name="hue_order" placeholder="vector of strings" value="default">
-                      </div>
-                       <br>
-                    
-                    
-                      <strong>
+                      <div><strong>
                         hue_norm
-                      </strong>
+                      </strong></div>
                       <div>
                         <label for="hue_norm">Set the normalization range</label>
                       </div>
                       <div>
                         <input id="hue_norm" type="text" name="hue_norm" placeholder="tuple or matplotlib.colors.Normalize" value="default">
                       </div>
-                       <br>
+                      <br>
                     
                     
-                      <strong>
-                        color
-                      </strong>
+                      <div><strong>
+                        sizes
+                      </strong></div>
                       <div>
-                        <label for="color">Single color specification for when hue mapping is not used</label>
+                        <label for="sizes">Object that determines how sizes are chosen</label>
                       </div>
                       <div>
-                        <input id="color" type="text" name="color" placeholder="matplotlib color" value="default">
+                        <input id="sizes" type="text" name="sizes" placeholder="list, dict, or tuple" value="default">
                       </div>
-                       <br>
+                      <br>
                     
                     
-                      <strong>
-                        log_scale
-                      </strong>
+                      <div><strong>
+                        size_order
+                      </strong></div>
                       <div>
-                        <label for="log_scale">Set axis scale to log</label>
+                        <label for="size_order">Specified order for appearance of the size variable levels</label>
                       </div>
                       <div>
-                        <input id="log_scale" type="text" name="log_scale" placeholder="bool or number, or pair of bools or numbers" value="default">
+                        <input id="size_order" type="text" name="size_order" placeholder="list" value="default">
                       </div>
-                       <br>
+                      <br>
                     
                     
-                      <strong>
+                      <div><strong>
+                        size_norm
+                      </strong></div>
+                      <div>
+                        <label for="size_norm">Normalization in data units for scaling plot objects when the size variable is numeric</label>
+                      </div>
+                      <div>
+                        <input id="size_norm" type="text" name="size_norm" placeholder="tuple or Normalize object" value="default">
+                      </div>
+                      <br>
+                    
+                    
+                      <div><strong>
+                        markers
+                      </strong></div>
+                      <div>
+                        <label for="markers">Object determining how to draw the markers for different levels of the style variable</label>
+                      </div>
+                      <div>
+                        <input id="markers" type="text" name="markers" placeholder="boolean, list, or dict" value="default">
+                      </div>
+                      <br>
+                    
+                    
+                      <div><strong>
+                        style_order
+                      </strong></div>
+                      <div>
+                        <label for="style_order">Specified order for appearance of the style variable levels</label>
+                      </div>
+                      <div>
+                        <input id="style_order" type="text" name="style_order" placeholder="list" value="default">
+                      </div>
+                      <br>
+                    
+                    
+                      <div><strong>
+                        {x,y}_bins
+                      </strong></div>
+                      <div>
+                        <label for="{x,y}_bins">Currently non-functional</label>
+                      </div>
+                      <div>
+                        <input id="{x,y}_bins" type="text" name="{x,y}_bins" placeholder="lists or array or functions" value="default">
+                      </div>
+                      <br>
+
+                    
+                      <div><strong>
+                        units             
+                      </strong></div>
+                      <div>
+                        <label for="units">Identifier of sampling units </label>
+                      </div>
+                      <div>
+                        <input id="units" type="text" name="units" placeholder="vector or key in data" value="default">
+                      </div>
+                      <br>
+
+                    
+                      <div><strong>
+                        estimator
+                      </strong></div>
+                      <div>
+                        <label for="estimator">Method for aggregating across multiple observations of the y variable at the same x level</label>
+                      </div>
+                      <div>
+                        <input id="estimator" type="text" name="estimator" placeholder="Enter the function name" value="default">
+                      </div>
+                      <br>
+
+                    
+                      <div><strong>
+                        ci
+                      </strong></div>
+                      <div>
+                        <label for="ci">Size of Confidence Interval (a float, or "sd", or None) </label>
+                      </div>
+                      <div>
+                        <input id="ci" type="text" name="ci" placeholder="int or 'sd' or None" value="default">
+                      </div>
+                      <br>
+                    
+                    
+                      <div><strong>
+                        n_boot
+                      </strong></div>
+                      <div>
+                        <label for="n_boot">Number of bootstrap iterations to use</label>
+                      </div>
+                      <div>
+                        <input id="n_boot" type="text" name="n_boot" placeholder="int" value="default">
+                      </div>
+                      <br>
+
+                    
+                      <div><strong>
+                        alpha
+                      </strong></div>
+                      <div>
+                        <label for="alpha">Proportional opacity of the points </label>
+                      </div>
+                      <div>
+                        <input id="alpha" type="text" name="alpha" placeholder="float" value="default">
+                      </div>
+                      <br>
+                    
+                    
+                      <div><strong>
+                        {x,y}_jitter
+                      </strong></div>
+                      <div>
+                        <label for="{x,y}_jitter">Currently non-functional </label>
+                      </div>
+                      <div>
+                        <input id="{x,y}_jitter" type="text" name="{x,y}_jitter" placeholder="booleans or floats" value="default">
+                      </div>
+                      <br>
+
+                    
+                      <div><strong>
                         legend
-                      </strong>
+                      </strong></div>
                       <div>
-                        <label for="legend">Will suppress the legend for semantic variables if False.</label>
+                        <label for="legend">How to draw the legend</label>
                       </div>
                       <div>
                           <select id="legend" name="legend">
                           <option value="default"> default </option>
-                          <option value="True"> True </option>
+                          <option value='"auto"'> auto </option>
+                          <option value='"brief"'> brief </option>
+                          <option value='"full"'> full </option>
                           <option value="False"> False </option>
                         </select>
                       </div>
-                       <br>
-
+                      <br>
                     
-                      <strong>
+                    
+                      <div><strong>
                         ax
-                      </strong>
+                      </strong></div>
                       <div>
-                        <label for="ax">Pre-existing axes for the plot</label>
+                        <label for="ax">Axes object to draw the plot onto</label>
                       </div>
                       <div>
-                        <input id="ax" type="text" name="ax" placeholder="matplotlib.axes. Axes" value="default">
+                        <input id="ax" type="text" name="ax" placeholder="matplotlib axes" value="default">
                       </div>
-                       <br>
+                      <br>
+                        </div>
+                      </div>
+                    </div>
                   </div>
-                </div>
+                  <br>
+              <div class="ctr">
+                <button class="btn btn-primary btn-lg">SUBMIT!</button>
               </div>
-            </div>
-            <br>
-            <div class="ctr">
-              <button class="btn btn-primary btn-sm">SUBMIT!</button>
-            </div>
-            <br>
-          </form>
-        <%end%>
-
-        <%if @the_type == "Line Chart"%>
-          <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
-            <symbol id="check-circle-fill" fill="currentColor" viewBox="0 0 16 16">
-              <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"/>
-            </symbol>
-            <symbol id="info-fill" fill="currentColor" viewBox="0 0 16 16">
-              <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm.93-9.412-1 4.705c-.07.34.029.533.304.533.194 0 .487-.07.686-.246l-.088.416c-.287.346-.92.598-1.465.598-.703 0-1.002-.422-.808-1.319l.738-3.468c.064-.293.006-.399-.287-.47l-.451-.081.082-.381 2.29-.287zM8 5.5a1 1 0 1 1 0-2 1 1 0 0 1 0 2z"/>
-            </symbol>
-            <symbol id="exclamation-triangle-fill" fill="currentColor" viewBox="0 0 16 16">
-              <path d="M8.982 1.566a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566zM8 5c.535 0 .954.462.9.995l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 5.995A.905.905 0 0 1 8 5zm.002 6a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
-            </symbol>
-          </svg>
-
-          <div class="alert alert-primary d-flex align-items-center" role="alert">
-            <svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Info:"><use xlink:href="#info-fill"/></svg>
-            <div>
-              <a href="https://seaborn.pydata.org/generated/seaborn.lineplot.html" target="_blank">
-                 More Info on line plot Arguments...
-              </a>
-            </div>
-          </div>
-
-          <form action="/arguments/<%=@the_type%>" class="">
-            <div class="accordion" id="accordionExample">
-              <div class="accordion-item">
-                <h2 class="accordion-header" id="headingOne">
-                  <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                    <strong> Commonly used arguements </strong>
-                  </button>
-                </h2>
-                <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
-                  <div class="accordion-body">
-                     
-                      <strong>
-                        <label for="x"> Name of X Variable </label>
-                      </strong>
-                      <div>
-                        <input id="x" type="text" name="x" placeholder="Enter the name of X variable...">
-                      </div>
-                       <br>
-                    
-                      <strong>
-                        <label for="y"> Name of Y Variable </label>
-                      </strong>
-                      <div>
-                        <input id="y" type="text" name="y" placeholder="Enter the name of Y variable...">
-                      </div>
-                       <br>
-                    
-                      <strong>
-                        <label for="data"> Name of Dataset </label>
-                      </strong>
-                      <div>
-                        <input id="data" type="text" name="data" placeholder="Enter the name of dataset...">
-                      </div>
-                       <br>
-                  </div>
-                </div>
-              </div>
-              <div class="accordion-item">
-                <h2 class="accordion-header" id="headingTwo">
-                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                    <strong> Recommended Optionals </strong>
-                  </button>
-                </h2>
-                <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
-                  <div class="accordion-body">
-                    
-                      <strong>
-                        <label for="set_title"> A title </label>
-                      </strong>
-                      <div>
-                        <input id="set_title" type="text" name="set_title" placeholder="The title name you want..." value="default">
-                      </div>
-                       <br>
-                    
-                      <strong>
-                        <label for="set_xlabel"> X axis label </label>
-                      </strong>
-                      <div>
-                        <input id="set_xlabel" type="text" name="set_xlabel" placeholder="The axis name you want..." value="default">
-                      </div>
-                       <br>
-                    
-                      <strong>
-                        <label for="set_ylabel"> Y axis label </label>
-                      </strong>
-                      <div>
-                        <input id="set_ylabel" type="text" name="set_ylabel" placeholder="The axis name you want..." value="default">
-                      </div>
-                       <br>
-                  </div>
-                </div>
-              </div>
-              <div class="accordion-item">
-                <h2 class="accordion-header" id="headingThree">
-                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                    <strong> Advanced Optionals </strong>
-                  </button>
-                </h2>
-                <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
-                  <div class="accordion-body">
-                    
-                <strong>
-                  hue
-                </strong>
-                <div>
-                  <label for="hue"> Name of the Vector Variable (e.g. "Smoker_dummy", "Male_dummy")</label>
-                </div>
-                <div>
-                  <input id="hue" type="text" name="hue" placeholder="Separates your X by a vector variable" value="default">
-                </div>
-                 <br>
-              
-              
-                <strong>
-                  size
-                </strong>
-                <div>
-                  <label for="size"> Grouping variable that produces lines with different widths</label>
-                </div>
-                <div>
-                  <input id="size" type="text" name="size" placeholder="vector or key in data" value="default">
-                </div>
-                 <br>
-
-              
-                <strong>
-                  style
-                </strong>
-                <div>
-                  <label for="style">Grouping variable that produces lines with different dashes and/or markers</label>
-                </div>
-                <div>
-                  <input id="style" type="text" name="style" placeholder="vector or key in data" value="default">
-                </div>
-                 <br>
-
-              
-                <strong>
-                  palette
-                </strong>
-                <div>
-                  <label for="palette">Colors to use for different levels of hue variable, details check color_palette()</label>
-                </div>
-                <div>
-                  <input id="palette" type="text" name="palette" placeholder="Enter color palette" value="default">
-                </div>
-                 <br>
-
-              
-                <strong>
-                  hue_order
-                </strong>
-                <div>
-                  <label for="hue_order"> Order of the Vector Variable Categories (enter a list of hue names, e.g. ["a","b","c"])</label>
-                </div>
-                <div>
-                  <input id="hue_order" type="text" name="hue_order" placeholder="Order to plot the categorical levels in" value="default">
-                </div>
-                 <br>
-
-              
-                <strong>
-                  hue_norm
-                </strong>
-                <div>
-                  <label for="hue_norm">Set the normalization range</label>
-                </div>
-                <div>
-                  <input id="hue_norm" type="text" name="hue_norm" placeholder="tuple or matplotlib.colors.Normalize" value="default">
-                </div>
-                 <br>
-              
-              
-                <strong>
-                  sizes
-                </strong>
-                <div>
-                  <label for="sizes">Object that determines how sizes are chosen</label>
-                </div>
-                <div>
-                  <input id="sizes" type="text" name="sizes" placeholder="list, dict, or tuple" value="default">
-                </div>
-                 <br>
-              
-              
-                <strong>
-                  size_order
-                </strong>
-                <div>
-                  <label for="size_order">Specified order for appearance of the size variable levels</label>
-                </div>
-                <div>
-                  <input id="size_order" type="text" name="size_order" placeholder="list" value="default">
-                </div>
-                 <br>
-              
-              
-                <strong>
-                  size_norm
-                </strong>
-                <div>
-                  <label for="size_norm">Normalization in data units for scaling plot objects when the size variable is numeric</label>
-                </div>
-                <div>
-                  <input id="size_norm" type="text" name="size_norm" placeholder="tuple or Normalize object" value="default">
-                </div>
-                 <br>
-              
-              
-                <strong>
-                  dashes
-                </strong>
-                <div>
-                  <label for="dashes">Object determining how to draw the lines for different levels of the style variable</label>
-                </div>
-                <div>
-                  <input id="dashes" type="text" name="dashes" placeholder="boolean, list, or dict" value="default">
-                </div>
-                 <br>
-              
-              
-                <strong>
-                  markers
-                </strong>
-                <div>
-                  <label for="markers">Object determining how to draw the markers for different levels of the style variable</label>
-                </div>
-                <div>
-                  <input id="markers" type="text" name="markers" placeholder="boolean, list, or dict" value="default">
-                </div>
-                 <br>
-              
-              
-                <strong>
-                  style_order
-                </strong>
-                <div>
-                  <label for="style_order">Specified order for appearance of the style variable levels</label>
-                </div>
-                <div>
-                  <input id="style_order" type="text" name="style_order" placeholder="list" value="default">
-                </div>
-                 <br>
-
-              
-                <strong>
-                  units             
-                </strong>
-                <div>
-                  <label for="units">Identifier of sampling units </label>
-                </div>
-                <div>
-                  <input id="units" type="text" name="units" placeholder="vector or key in data" value="default">
-                </div>
-                 <br>
-
-              
-                <strong>
-                  estimator
-                </strong>
-                <div>
-                  <label for="estimator">Method for aggregating across multiple observations of the y variable at the same x level</label>
-                </div>
-                <div>
-                  <input id="estimator" type="text" name="estimator" placeholder="Enter the function name" value="default">
-                </div>
-                 <br>
-
-              
-                <strong>
-                  ci
-                </strong>
-                <div>
-                  <label for="ci">Size of Confidence Interval (a float, or "sd", or None) </label>
-                </div>
-                <div>
-                  <input id="ci" type="text" name="ci" placeholder="int or 'sd' or None" value="default">
-                </div>
-                 <br>
-              
-              
-                <strong>
-                  n_boot
-                </strong>
-                <div>
-                  <label for="n_boot">Number of bootstrap iterations to use</label>
-                </div>
-                <div>
-                  <input id="n_boot" type="text" name="n_boot" placeholder="int" value="default">
-                </div>
-                 <br>
-
-              
-                <strong>
-                  seed
-                </strong>
-                <div>
-                  <label for="seed">Seed or random number generator for reproducible bootstrapping </label>
-                </div>
-                <div>
-                  <input id="seed" type="text" name="seed" placeholder="int, numpy.random.Generator, or numpy.random.RandomState" value="default">
-                </div>
-                 <br>
-
-
-              
-                <strong>
-                  sort
-                </strong>
-                <div>
-                  <label for="sort">Whether to sort data by the x and y variables</label>
-                </div>
-                <div>
-                    <select id="sort" name="sort">
-                    <option value="default"> default </option>
-                    <option value="True"> True </option>
-                    <option value="False"> False </option>
-                  </select>
-                </div>
-                 <br>
-
-              
-                <strong>
-                  err_style
-                </strong>
-                <div>
-                  <label for="err_style">Whether to draw the confidence intervals with translucent error bands or discrete error bars</label>
-                </div>
-                <div>
-                  <input id="err_style" type="text" name="err_style" placeholder="'band' or 'bars'" value="default">
-                </div>
-                 <br>
-
-              
-                <strong>
-                  err_kws
-                </strong>
-                <div>
-                  <label for="err_kws">Additional parameters to control the aesthetics of the error bars.</label>
-                </div>
-                <div>
-                  <input id="err_kws" type="text" name="err_kws" placeholder="dict of keyword arguments" value="default">
-                </div>
-                 <br>
-
-              
-                <strong>
-                  legend
-                </strong>
-                <div>
-                  <label for="legend">How to draw the legend</label>
-                </div>
-                <div>
-                    <select id="legend" name="legend">
-                    <option value="default"> default </option>
-                    <option value='"auto"'> auto </option>
-                    <option value='"brief"'> brief </option>
-                    <option value='"full"'> full </option>
-                    <option value="False"> False </option>
-                  </select>
-                </div>
-                 <br>
-
-              
-                <strong>
-                  ax
-                </strong>
-                <div>
-                  <label for="ax">Axes object to draw the plot onto</label>
-                </div>
-                <div>
-                  <input id="ax" type="text" name="ax" placeholder="matplotlib axes" value="default">
-                </div>
-                 <br>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <br>
-            <div class="ctr">
-              <button class="btn btn-primary btn-sm">SUBMIT!</button>
-            </div>
-            <br>
-          </form>
-        <%end%>
-
-        <%if @the_type == "Scatter Plot"%>
-          <svg xmlns="http://www.w3.org/2000/svg" style="display: none;">
-            <symbol id="check-circle-fill" fill="currentColor" viewBox="0 0 16 16">
-              <path d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-3.97-3.03a.75.75 0 0 0-1.08.022L7.477 9.417 5.384 7.323a.75.75 0 0 0-1.06 1.06L6.97 11.03a.75.75 0 0 0 1.079-.02l3.992-4.99a.75.75 0 0 0-.01-1.05z"/>
-            </symbol>
-            <symbol id="info-fill" fill="currentColor" viewBox="0 0 16 16">
-              <path d="M8 16A8 8 0 1 0 8 0a8 8 0 0 0 0 16zm.93-9.412-1 4.705c-.07.34.029.533.304.533.194 0 .487-.07.686-.246l-.088.416c-.287.346-.92.598-1.465.598-.703 0-1.002-.422-.808-1.319l.738-3.468c.064-.293.006-.399-.287-.47l-.451-.081.082-.381 2.29-.287zM8 5.5a1 1 0 1 1 0-2 1 1 0 0 1 0 2z"/>
-            </symbol>
-            <symbol id="exclamation-triangle-fill" fill="currentColor" viewBox="0 0 16 16">
-              <path d="M8.982 1.566a1.13 1.13 0 0 0-1.96 0L.165 13.233c-.457.778.091 1.767.98 1.767h13.713c.889 0 1.438-.99.98-1.767L8.982 1.566zM8 5c.535 0 .954.462.9.995l-.35 3.507a.552.552 0 0 1-1.1 0L7.1 5.995A.905.905 0 0 1 8 5zm.002 6a1 1 0 1 1 0 2 1 1 0 0 1 0-2z"/>
-            </symbol>
-          </svg>
-
-          <div class="alert alert-primary d-flex align-items-center" role="alert">
-            <svg class="bi flex-shrink-0 me-2" width="24" height="24" role="img" aria-label="Info:"><use xlink:href="#info-fill"/></svg>
-            <div>
-              <a href="https://seaborn.pydata.org/generated/seaborn.scatterplot.html" target="_blank">
-                  More Info on scatter plot Arguments...
-              </a>
-            </div>
-          </div>
-          
-          <form action="/arguments/<%=@the_type%>" class="">
-            <div class="accordion" id="accordionExample">
-              <div class="accordion-item">
-                <h2 class="accordion-header" id="headingOne">
-                  <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
-                    <strong> Commonly used arguements </strong>
-                  </button>
-                </h2>
-                <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
-                  <div class="accordion-body">
-                    <div>
-                      <strong><label for="x"> Name of X Variable </label></strong>
-                    </div>
-                    <div>
-                      <input id="x" type="text" name="x" placeholder="Enter the name of X variable...">
-                    </div>
-                     <br>
-                  
-                    <div>
-                      <strong><label for="y"> Name of Y Variable </label></strong>
-                    </div>
-                    <div>
-                      <input id="y" type="text" name="y" placeholder="Enter the name of Y variable...">
-                    </div>
-                     <br>
-                  
-                    <div>
-                      <strong><label for="data"> Name of Dataset </label></strong>
-                    </div>
-                    <div>
-                      <input id="data" type="text" name="data" placeholder="Enter the name of dataset...">
-                    </div>
-                     <br>
-                  </div>
-                </div>
-              </div>
-              <div class="accordion-item">
-                <h2 class="accordion-header" id="headingTwo">
-                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
-                    <strong> Recommended Optionals </strong>
-                  </button>
-                </h2>
-                <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
-                  <div class="accordion-body">
-                    <div>
-                      <strong><label for="set_title"> A title </label></strong>
-                    </div>
-                    <div>
-                      <input id="set_title" type="text" name="set_title" placeholder="The title name you want..." value="default">
-                    </div>
-                    <br>
-                  
-                    <div>
-                      <strong><label for="set_xlabel"> X axis label </label></strong>
-                    </div>
-                    <div>
-                      <input id="set_xlabel" type="text" name="set_xlabel" placeholder="The axis name you want..." value="default">
-                    </div>
-                    <br>
-                  
-                    <div>
-                      <strong><label for="set_ylabel"> Y axis label </label></strong>
-                    </div>
-                    <div>
-                      <input id="set_ylabel" type="text" name="set_ylabel" placeholder="The axis name you want..." value="default">
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div class="accordion-item">
-                <h2 class="accordion-header" id="headingThree">
-                  <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
-                    <strong> Advanced Optionals </strong>
-                  </button>
-                </h2>
-                <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
-                  <div class="accordion-body">
-                    <div><strong>
-                      hue
-                    </strong></div>
-                    <div>
-                      <label for="hue"> Name of the Vector Variable (e.g. "Smoker_dummy", "Male_dummy")</label>
-                    </div>
-                    <div>
-                      <input id="hue" type="text" name="hue" placeholder="Separates your X by a vector variable" value="default">
-                    </div>
-                    <br>
-                  
-                  
-                    <div><strong>
-                      size
-                    </strong></div>
-                    <div>
-                      <label for="size"> Grouping variable that produces lines with different widths</label>
-                    </div>
-                    <div>
-                      <input id="size" type="text" name="size" placeholder="vector or key in data" value="default">
-                    </div>
-                    <br>
-
-                  
-                    <div><strong>
-                      style
-                    </strong></div>
-                    <div>
-                      <label for="style">Grouping variable that produces lines with different dashes and/or markers</label>
-                    </div>
-                    <div>
-                      <input id="style" type="text" name="style" placeholder="vector or key in data" value="default">
-                    </div>
-                    <br>
-
-                  
-                    <div><strong>
-                      palette
-                    </strong></div>
-                    <div>
-                      <label for="palette">Colors to use for different levels of hue variable, details check color_palette()</label>
-                    </div>
-                    <div>
-                      <input id="palette" type="text" name="palette" placeholder="Enter color palette" value="default">
-                    </div>
-                    <br>
-
-                  
-                    <div><strong>
-                      hue_order
-                    </strong></div>
-                    <div>
-                      <label for="hue_order"> Order of the Vector Variable Categories (enter a list of hue names, e.g. ["a","b","c"])</label>
-                    </div>
-                    <div>
-                      <input id="hue_order" type="text" name="hue_order" placeholder="Order to plot the categorical levels in" value="default">
-                    </div>
-                    <br>
-
-                  
-                    <div><strong>
-                      hue_norm
-                    </strong></div>
-                    <div>
-                      <label for="hue_norm">Set the normalization range</label>
-                    </div>
-                    <div>
-                      <input id="hue_norm" type="text" name="hue_norm" placeholder="tuple or matplotlib.colors.Normalize" value="default">
-                    </div>
-                    <br>
-                  
-                  
-                    <div><strong>
-                      sizes
-                    </strong></div>
-                    <div>
-                      <label for="sizes">Object that determines how sizes are chosen</label>
-                    </div>
-                    <div>
-                      <input id="sizes" type="text" name="sizes" placeholder="list, dict, or tuple" value="default">
-                    </div>
-                    <br>
-                  
-                  
-                    <div><strong>
-                      size_order
-                    </strong></div>
-                    <div>
-                      <label for="size_order">Specified order for appearance of the size variable levels</label>
-                    </div>
-                    <div>
-                      <input id="size_order" type="text" name="size_order" placeholder="list" value="default">
-                    </div>
-                    <br>
-                  
-                  
-                    <div><strong>
-                      size_norm
-                    </strong></div>
-                    <div>
-                      <label for="size_norm">Normalization in data units for scaling plot objects when the size variable is numeric</label>
-                    </div>
-                    <div>
-                      <input id="size_norm" type="text" name="size_norm" placeholder="tuple or Normalize object" value="default">
-                    </div>
-                    <br>
-                  
-                  
-                    <div><strong>
-                      markers
-                    </strong></div>
-                    <div>
-                      <label for="markers">Object determining how to draw the markers for different levels of the style variable</label>
-                    </div>
-                    <div>
-                      <input id="markers" type="text" name="markers" placeholder="boolean, list, or dict" value="default">
-                    </div>
-                    <br>
-                  
-                  
-                    <div><strong>
-                      style_order
-                    </strong></div>
-                    <div>
-                      <label for="style_order">Specified order for appearance of the style variable levels</label>
-                    </div>
-                    <div>
-                      <input id="style_order" type="text" name="style_order" placeholder="list" value="default">
-                    </div>
-                    <br>
-                  
-                  
-                    <div><strong>
-                      {x,y}_bins
-                    </strong></div>
-                    <div>
-                      <label for="{x,y}_bins">Currently non-functional</label>
-                    </div>
-                    <div>
-                      <input id="{x,y}_bins" type="text" name="{x,y}_bins" placeholder="lists or array or functions" value="default">
-                    </div>
-                    <br>
-
-                  
-                    <div><strong>
-                      units             
-                    </strong></div>
-                    <div>
-                      <label for="units">Identifier of sampling units </label>
-                    </div>
-                    <div>
-                      <input id="units" type="text" name="units" placeholder="vector or key in data" value="default">
-                    </div>
-                    <br>
-
-                  
-                    <div><strong>
-                      estimator
-                    </strong></div>
-                    <div>
-                      <label for="estimator">Method for aggregating across multiple observations of the y variable at the same x level</label>
-                    </div>
-                    <div>
-                      <input id="estimator" type="text" name="estimator" placeholder="Enter the function name" value="default">
-                    </div>
-                    <br>
-
-                  
-                    <div><strong>
-                      ci
-                    </strong></div>
-                    <div>
-                      <label for="ci">Size of Confidence Interval (a float, or "sd", or None) </label>
-                    </div>
-                    <div>
-                      <input id="ci" type="text" name="ci" placeholder="int or 'sd' or None" value="default">
-                    </div>
-                    <br>
-                  
-                  
-                    <div><strong>
-                      n_boot
-                    </strong></div>
-                    <div>
-                      <label for="n_boot">Number of bootstrap iterations to use</label>
-                    </div>
-                    <div>
-                      <input id="n_boot" type="text" name="n_boot" placeholder="int" value="default">
-                    </div>
-                    <br>
-
-                  
-                    <div><strong>
-                      alpha
-                    </strong></div>
-                    <div>
-                      <label for="alpha">Proportional opacity of the points </label>
-                    </div>
-                    <div>
-                      <input id="alpha" type="text" name="alpha" placeholder="float" value="default">
-                    </div>
-                    <br>
-                  
-                  
-                    <div><strong>
-                      {x,y}_jitter
-                    </strong></div>
-                    <div>
-                      <label for="{x,y}_jitter">Currently non-functional </label>
-                    </div>
-                    <div>
-                      <input id="{x,y}_jitter" type="text" name="{x,y}_jitter" placeholder="booleans or floats" value="default">
-                    </div>
-                    <br>
-
-                  
-                    <div><strong>
-                      legend
-                    </strong></div>
-                    <div>
-                      <label for="legend">How to draw the legend</label>
-                    </div>
-                    <div>
-                        <select id="legend" name="legend">
-                        <option value="default"> default </option>
-                        <option value='"auto"'> auto </option>
-                        <option value='"brief"'> brief </option>
-                        <option value='"full"'> full </option>
-                        <option value="False"> False </option>
-                      </select>
-                    </div>
-                    <br>
-                  
-                  
-                    <div><strong>
-                      ax
-                    </strong></div>
-                    <div>
-                      <label for="ax">Axes object to draw the plot onto</label>
-                    </div>
-                    <div>
-                      <input id="ax" type="text" name="ax" placeholder="matplotlib axes" value="default">
-                    </div>
-                    <br>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <br>
-            <div class="ctr">
-              <button class="btn btn-primary btn-sm">SUBMIT!</button>
-            </div>
-            <br>
-          </form>
-        <%end%>
-      </div>
-  </body>
-
+              <br>
+            </form>
+          <%end%>
+        </div>
+    </body>
+  </div>
 </html>

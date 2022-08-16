@@ -11,5 +11,8 @@ Rails.application.routes.draw do
   
   #present arguments
     get("/arguments/:the_type",{:controller=>"plot", :action=>"argument"})
+  
+    #reference page
+    get("/reference",{:controller=>"home", :action=>"reference"})
 
 end

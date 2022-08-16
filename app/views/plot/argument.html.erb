@@ -1,4 +1,5 @@
-<h1> Your <%=@the_type%> arguments have been generated below:</h1>
+<br>
+<h2> Your <%=@the_type%> arguments have been generated below:</h2>
   <div>
     <h1>
     <%if params.fetch("ax")!="default"%>
@@ -15,11 +16,15 @@
       <%end%>
     <%end%>
     <%arg_str=arg_str[0...-1]+")"%>
+<%if arg_str.include?("=,") || arg_str.include?("=)")||arg_str.chomp(")").strip[-1]=="="%>
+    <h5 class="alert alert-danger" role="alert">Attention: some critical argument(s) missing, please check your input!
+    <a href = "javascript:history.back()">Click here to revise</a></h5>
+<%end%>
 <link rel="stylesheet"
         href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.0.3/styles/default.min.css">
   <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.0.3/highlight.min.js"></script>
   <script>hljs.initHighlightingOnLoad();</script>
-<pre><code class="python">
+<pre><code class="python"><h6>
 import seaborn as sns
 <%=arg_str%>
     <%params.keys.each do |a_key|%>
@@ -27,6 +32,12 @@ import seaborn as sns
 <%=arg_str_0+".#{a_key}(#{params.fetch(a_key)})"%>
       <%end%>
     <%end%>
-</code></pre>
+</h6></code></pre>
     </h1>
   </div>
+
+<%if arg_str.include?("=,")==false && arg_str.include?("=)")==false && arg_str.chomp(")").strip[-1]!="="%>
+    <h5><div class="alert alert-success" role="alert">
+      Yay! Copy and paste the code above to your python script and see if it works!
+    </div></h5>
+<%end%>

@@ -7,4 +7,7 @@ class HomeController < ApplicationController
     render({:template => "homepage/hesitate.html.erb"})
   end
 
+  def reference
+    render(:template => "homepage/reference.html.erb")
+  end
 end

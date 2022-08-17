@@ -1,0 +1,27 @@
+<html>
+    <head>
+      <link rel="stylesheet" href="https://pyscript.net/alpha/pyscript.css" />
+      <script defer src="https://pyscript.net/alpha/pyscript.js"></script>
+      <py-env>
+        - pandas
+      </py-env>
+    </head>
+
+  <body>
+    <div class="whole">
+      <h1>Let's look at the seaborn-tips sample data</h1>
+      <div id="csv"></div>
+      <py-script>
+
+        import pandas as pd
+        import sqlite3 as sql
+        from pyodide.http import open_url
+
+        #read a sample data - tips
+        url_target = open_url("https://raw.githubusercontent.com/mwaskom/seaborn-data/master/tips.csv")
+        tips = pd.read_csv(url_target)
+        tips
+      </py-script>
+    </div>
+  </body>
+</html>

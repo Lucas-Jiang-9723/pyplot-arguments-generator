@@ -17,7 +17,12 @@
         margin-left:80px;
         margin-right:80px;
       }
-
+      .footer{
+        margin-left:80px;
+        margin-right:80px;
+        position: fixed;
+        bottom:0;
+      }
     </style>
 
     <!-- Connect Bootstrap CSS -->
@@ -45,7 +50,7 @@
               <a class="nav-link active" aria-current="page" href="/">Generator</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" aria-current="page" href="/playaround">Playaround</a>
+              <a class="nav-link" aria-current="page" href="/playaround">Sample Playaround</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="/reference">References</a>
@@ -56,4 +61,9 @@
     </nav>
     <%= yield %>
   </body>
+  <footer>
+    <div class= "footer">
+     Author: Yankun(Lucas) Jiang
+    </div>
+  </footer>
 </html>

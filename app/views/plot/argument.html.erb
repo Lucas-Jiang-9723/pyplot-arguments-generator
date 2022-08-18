@@ -30,8 +30,11 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.0.3/highlight.min.js"></script>
   <script>hljs.initHighlightingOnLoad();</script>
 <pre><code class="python"><h6>
-import matplotlib.pyplot as plt
+import pandas as pd
 import seaborn as sns
+import numpy as np
+import matplotlib.pyplot as plt
+fig,<%=arg_str_0%> = plt.subplots()
 <%=arg_str%>
     <%params.keys.each do |a_key|%>
       <% if (a_key=="set_title" || a_key=="set_xlabel" || a_key=="set_ylabel") && params.fetch(a_key)!="default"%>
@@ -49,4 +52,3 @@ import seaborn as sns
     </div></h5>
 <%end%>
 </div>
-
